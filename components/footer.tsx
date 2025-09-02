@@ -8,11 +8,9 @@ const Footer = () => {
   
 
   const socialLinks = [
-    { icon: Facebook, href: "#", color: "hover:text-blue-500" },
-    { icon: Twitter, href: "#", color: "hover:text-blue-400" },
-    { icon: Instagram, href: "#", color: "hover:text-pink-500" },
-    { icon: Linkedin, href: "#", color: "hover:text-blue-600" },
-    { icon: Youtube, href: "#", color: "hover:text-red-500" },
+    { icon: Facebook, href: "https://www.facebook.com/profile.php?id=61553461282094", color: "hover:text-blue-500" },
+    { icon: Instagram, href: "https://www.instagram.com/newmun.bh/", color: "hover:text-pink-500" },
+    { icon: Youtube, href: "https://www.youtube.com/@thenewindianschoolwllkingd3517", color: "hover:text-red-500" },
   ]
 
   return (
@@ -66,6 +64,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
+                  target="_blank"
                   className={`w-10 h-10 bg-[#194272] bg-opacity-10 rounded-lg flex items-center justify-center text-[#194272] hover:bg-[#194272] hover:text-white transition-all duration-300`}
                   aria-label={social.icon.name}
                 >
@@ -85,7 +84,7 @@ const Footer = () => {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              <p>&copy; 2024 NewMUN. All rights reserved.</p>
+              <p>&copy; 2025 NewMUN. All rights reserved.</p>
             </div>
             <div className="flex space-x-6 text-gray-400 text-sm">
               <a href="#" className="hover:text-[#194272] transition-colors duration-300">

@@ -8,87 +8,154 @@ const CouncilsSection = () => {
 
   const seniorCouncils = [
     {
-      name: "Senior Student Government",
+      name: "United Nations Security Councils",
       description:
-        "Leading school-wide initiatives and representing the voice of senior students in administrative decisions and policy making.",
-      icon: Users,
+        (
+        <>
+        ● South China Sea Issue <br />
+        ● Myanmar Issue
+        </>
+      ),
+      icon: ArrowRight,
       members: 15,
       projects: 8,
-      image: "/placeholder.svg?height=300&width=400",
-      requirements: "Grade 11-12, Leadership Experience",
+      image: "/UNSC.png?height=300&width=400",
+      requirements: "Grades 9-12",
     },
     {
-      name: "Senior Academic Excellence",
+      name: "United Nations Development Program",
       description:
-        "Mentoring junior students and organizing advanced academic programs, competitions, and peer tutoring initiatives.",
-      icon: Target,
+        (
+        <>
+        ● Advancing gender equality through economic empowerment <br />
+        ● Youth employment and skill development in the digital economy
+        </>
+      ),
+      icon: ArrowRight,
       members: 12,
       projects: 6,
-      image: "/placeholder.svg?height=300&width=400",
-      requirements: "GPA 3.8+, Grade 11-12",
+      image: "/UNDP.png?height=300&width=400",
+      requirements: "Grades 9-12",
     },
     {
-      name: "Senior Innovation Hub",
+      name: "European Union",
       description:
-        "Spearheading cutting-edge technology projects and leading innovation workshops for the entire school community.",
-      icon: Lightbulb,
+        (
+        <>
+        ● Freedom of the Press and Civil Society in the EU <br />
+        ● Extension of EU into the Balkaans
+        </>
+      ),
+      icon: ArrowRight,
       members: 18,
       projects: 10,
-      image: "/placeholder.svg?height=300&width=400",
-      requirements: "STEM Focus, Grade 11-12",
+      image: "/European Union.png?height=300&width=400",
+      requirements: "Grades 9-12",
     },
     {
-      name: "Senior Community Leaders",
+      name: "Lok Sabha",
       description:
-        "Organizing large-scale community service projects and building partnerships with local organizations.",
-      icon: Heart,
+        (
+        <>
+        ● Narcotics Among Youth and the Involvement of Pharmaceuticals <br />
+        ● Border Security and Prevention of Attacks
+        </>
+      ),
+      icon: ArrowRight,
       members: 20,
       projects: 12,
-      image: "/placeholder.svg?height=300&width=400",
-      requirements: "50+ Service Hours, Grade 11-12",
+      image: "/Lok_Sabha.svg?height=300&width=400",
+      requirements: "Grades 9-12",
+    },
+    {
+      name: "United Nations Office for Outer Space Affairs",
+      description:
+        (
+        <>
+        ● Columbia Space Shuttle Disaster 2003 <br />
+        ● Ethical Concerns on Space Law and Governance
+        </>
+      ),
+      icon: ArrowRight,
+      members: 20,
+      projects: 12,
+      image: "/UNOOSA.png?height=300&width=400",
+      requirements: "Grades 9-12",
+    },
+    {
+      name: "International Monetary Fund",
+      description:
+        (
+        <>
+        ● The COVID-19 Economic Crisis (2020-2021)<br />
+        ● Crime in the world of Cryptocurrency
+        </>
+      ),
+      icon: ArrowRight,
+      members: 20,
+      projects: 12,
+      image: "/IMF.png?height=300&width=400",
+      requirements: "Grades 9-12",
+    },
+    {
+      name: "Fédération Internationale de l'Automobile",
+      description:
+        (
+        <>
+        ● Standardization VS Innovation: Freedom of Team in Car Design <br />
+        ● San Marino Grand Prix 1994
+        </>
+      ),
+      icon: Crown,
+      members: 20,
+      projects: 12,
+      image: "/FIA.png?height=300&width=400",
+      requirements: "Grades 9-12",
     },
   ]
 
   const juniorCouncils = [
     {
-      name: "Junior Student Representatives",
-      description:
-        "Learning leadership skills while representing younger students and organizing grade-level activities and events.",
-      icon: Users,
+      name: "United National Educational, Scientific Cultural Organisation",
+      description: (
+        <>
+        ● World Heritage Sites in Danger due to Earthquakes and Natural Disasters <br />
+        ● Use of Technology in Education
+        </>
+      ),
+      icon: ArrowRight,
       members: 25,
       projects: 6,
-      image: "/placeholder.svg?height=300&width=400",
-      requirements: "Grade 9-10, Teacher Recommendation",
+      image: "/UNESCO.png?height=300&width=400",
+      requirements: "Grades 6-8",
     },
     {
-      name: "Junior Academic Support",
-      description:
-        "Providing peer support and study groups while developing academic leadership skills under senior mentorship.",
-      icon: Target,
+      name: "United Nations Environment Programme",
+      description: (
+        <>
+        ● Air Quality and Public Health<br />
+        ● Sustainable Ocean Management
+        </>
+      ),
+      icon: ArrowRight,
       members: 20,
       projects: 4,
-      image: "/placeholder.svg?height=300&width=400",
-      requirements: "GPA 3.5+, Grade 9-10",
+      image: "/UNEP.jpg?height=300&width=400",
+      requirements: "Grades 6-8",
     },
     {
-      name: "Junior Tech Innovators",
-      description:
-        "Exploring technology and innovation through guided projects and learning from senior council members.",
-      icon: Lightbulb,
+      name: "World Health Organization",
+      description: (
+        <>
+        ● Universal Health Coverage <br />
+        ● Tackling Non-Communicable Diseases
+        </>
+      ),
+      icon: ArrowRight,
       members: 22,
       projects: 8,
-      image: "/placeholder.svg?height=300&width=400",
-      requirements: "Interest in STEM, Grade 9-10",
-    },
-    {
-      name: "Junior Community Helpers",
-      description:
-        "Participating in community service projects and learning the importance of civic engagement and social responsibility.",
-      icon: Heart,
-      members: 28,
-      projects: 10,
-      image: "/placeholder.svg?height=300&width=400",
-      requirements: "20+ Service Hours, Grade 9-10",
+      image: "/WHO.png?height=300&width=400",
+      requirements: "Grades 6-8",
     },
   ]
 
@@ -103,7 +170,7 @@ const CouncilsSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 fade-in"
         >
-          <h2 className="text-5xl font-bold mb-6 text-[#194272]">Student Leadership Councils</h2>
+          <h2 className="text-5xl font-bold mb-6 text-[#194272]">Our Councils</h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Empowering students to lead, innovate, and make a positive impact through structured leadership opportunities at every level.
           </p>
@@ -159,11 +226,11 @@ const CouncilsSection = () => {
                   <div className="absolute inset-0 bg-[#194272]/10 group-hover:bg-[#194272]/5 transition-colors duration-300" />
 
                   {/* Icon Overlay */}
-                  <div className="absolute top-6 left-6">
+                  {/* <div className="absolute top-6 left-6">
                     <div className="w-16 h-16 bg-[#194272]/90 rounded-2xl flex items-center justify-center backdrop-blur-sm">
                       <council.icon className="w-8 h-8 text-white" />
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Level Badge */}
                   <div className="absolute top-6 right-6">
@@ -192,7 +259,7 @@ const CouncilsSection = () => {
                     <div className="text-sm text-gray-700">{council.requirements}</div>
                   </div>
 
-                  {/* Stats */}
+                  {/* Stats 
                   <div className="flex items-center justify-between mb-6">
                     <div className="text-center">
                       <div className="text-2xl font-bold text-[#194272]">{council.members}</div>
@@ -206,7 +273,7 @@ const CouncilsSection = () => {
                       <div className="text-2xl font-bold text-[#194272]">100%</div>
                       <div className="text-sm text-gray-500">Engagement</div>
                     </div>
-                  </div>
+                  </div> */}
 
                   <button className="w-full py-3 bg-[#194272] text-white font-semibold rounded-full hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
                     Apply Now
@@ -217,7 +284,7 @@ const CouncilsSection = () => {
           ))}
         </div>
 
-        {/* Overall Stats */}
+        {/* Overall Stats 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -238,9 +305,9 @@ const CouncilsSection = () => {
                   <div className="text-blue-100 font-medium">{stat.label}</div>
                 </div>
               ))}
-            </div>
+            </div> 
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

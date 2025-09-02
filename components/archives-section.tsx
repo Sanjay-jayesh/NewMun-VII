@@ -14,7 +14,7 @@ const ArchivesSection = () => {
       stats: "1st Place",
     },
     {
-      year: "2023",
+      year: "2021",
       title: "Digital Learning Initiative",
       description:
         "Successfully implemented cutting-edge digital learning platforms across all grade levels, enhancing educational outcomes.",
@@ -23,7 +23,7 @@ const ArchivesSection = () => {
       stats: "100% Digital",
     },
     {
-      year: "2022",
+      year: "2023",
       title: "Community Outreach Program",
       description:
         "Launched comprehensive community service program engaging over 500 students in meaningful social impact projects.",
@@ -32,7 +32,7 @@ const ArchivesSection = () => {
       stats: "500+ Students",
     },
     {
-      year: "2021",
+      year: "2022",
       title: "Academic Excellence Recognition",
       description:
         "Received state recognition for outstanding academic programs and consistently high student achievement rates.",

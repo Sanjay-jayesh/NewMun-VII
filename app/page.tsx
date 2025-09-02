@@ -4,7 +4,6 @@ import dynamic from "next/dynamic"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import ResizableNavbar from "@/components/resizable-navbar"
-import Footer from "@/components/footer"
 import TracingBeam from "@/components/ui/tracing-beam"
 
 const HeroSection = dynamic(() => import("@/components/hero-section"), { ssr: false })
@@ -19,19 +18,20 @@ export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // Add smooth scrolling to the document
+    // Force scroll to top after hydration
+    setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" })
+    }, 0)
+
+    // Smooth scroll for nav clicks
     document.documentElement.style.scrollBehavior = "smooth"
 
     const ctx = gsap.context(() => {
-      // Enhanced smooth scroll animations
+      // Fade-in animations
       gsap.utils.toArray(".fade-in").forEach((element: any) => {
         gsap.fromTo(
           element,
-          {
-            opacity: 0,
-            y: 80,
-            scale: 0.95,
-          },
+          { opacity: 0, y: 80, scale: 0.95 },
           {
             opacity: 1,
             y: 0,
@@ -44,11 +44,11 @@ export default function Home() {
               end: "bottom 15%",
               toggleActions: "play none none reverse",
             },
-          },
+          }
         )
       })
 
-      // Enhanced parallax effects
+      // Parallax
       gsap.utils.toArray(".parallax").forEach((element: any) => {
         gsap.to(element, {
           yPercent: -40,
@@ -62,15 +62,11 @@ export default function Home() {
         })
       })
 
-      // Enhanced MacBook scroll effect
+      // MacBook scroll effect
       gsap.utils.toArray(".macbook-scroll").forEach((element: any) => {
         gsap.fromTo(
           element,
-          {
-            scale: 0.85,
-            opacity: 0,
-            rotateX: 15,
-          },
+          { scale: 0.85, opacity: 0, rotateX: 15 },
           {
             scale: 1,
             opacity: 1,
@@ -83,19 +79,15 @@ export default function Home() {
               end: "bottom 20%",
               scrub: 1.2,
             },
-          },
+          }
         )
       })
 
-      // Stagger animations for grid items
+      // Staggered grid animations
       gsap.utils.toArray(".stagger-item").forEach((element: any, index) => {
         gsap.fromTo(
           element,
-          {
-            opacity: 0,
-            y: 60,
-            scale: 0.9,
-          },
+          { opacity: 0, y: 60, scale: 0.9 },
           {
             opacity: 1,
             y: 0,
@@ -109,7 +101,7 @@ export default function Home() {
               toggleActions: "play none none reverse",
             },
             delay: index * 0.15,
-          },
+          }
         )
       })
     }, mainRef)
@@ -135,7 +127,6 @@ export default function Home() {
             <TeamSection />
             <CouncilsSection />
             <TestimonialSection />
-            <Footer />
           </div>
         </div>
       </TracingBeam>

@@ -5,49 +5,253 @@ import { Mail, Linkedin, Twitter, MapPin } from "lucide-react"
 const TeamSection = () => {
   const teamMembers = [
     {
-      name: "Dr. Sarah Johnson",
-      position: "Principal",
-      bio: "Leading educational innovation with 20+ years of experience in academic excellence and student development.",
+      name: "Ms. Soumi Mondal",
+      position: "Director",
+      bio: "She is the Soul of NewMUN since its very inception. Her character echoes the acheivements of the past, the glory of the present and the opportunities of the future.",
       image: "/placeholder.svg?height=400&width=400",
-      location: "Main Campus",
+      location: "NIS",
       social: {
-        email: "sarah.johnson@excellence.edu",
+        email: "#",
         linkedin: "#",
         twitter: "#",
       },
     },
     {
-      name: "Prof. Michael Chen",
-      position: "Head of STEM",
-      bio: "Pioneering STEM education with cutting-edge research and hands-on learning approaches that inspire innovation.",
+      name: "Fidel Marakar",
+      position: "Student Director",
+      bio: "Fidel leads this year's MUN Team along side Ms. Soumi with a profound passion for international affairs and politics.",
       image: "/placeholder.svg?height=400&width=400",
-      location: "Science Wing",
+      location: "XII A",
       social: {
-        email: "michael.chen@excellence.edu",
+        email: "#",
         linkedin: "#",
         twitter: "#",
       },
     },
     {
-      name: "Dr. Emily Rodriguez",
-      position: "Director of Arts",
-      bio: "Fostering creativity and artistic expression through comprehensive arts education programs and cultural initiatives.",
+      name: "Nahreen Mariyam Shameer",
+      position: "Secretary General",
+      bio: "",
       image: "/placeholder.svg?height=400&width=400",
-      location: "Arts Center",
+      location: "",
       social: {
-        email: "emily.rodriguez@excellence.edu",
+        email: "#",
         linkedin: "#",
         twitter: "#",
       },
     },
     {
-      name: "James Thompson",
-      position: "Athletic Director",
-      bio: "Building character and teamwork through comprehensive sports and wellness programs that develop well-rounded students.",
+      name: "Ahan Shailendra Kamble",
+      position: "Deputy Secretary General",
+      bio: "",
       image: "/placeholder.svg?height=400&width=400",
-      location: "Sports Complex",
+      location: "",
       social: {
-        email: "james.thompson@excellence.edu",
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Mohammed Aarib Ali Khan",
+      position: "Member of Research",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Neil Jose",
+      position: "Member of Research",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Alfia Rejan Varghese",
+      position: "Head of Finance & Logistics",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII ",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Anush Shetty",
+      position: "Undersecretary of Finance & Logistics",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Faiza Chunawala",
+      position: "Head of Delegate & Chair Training",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII C",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "S. Mridini",
+      position: "Undersecretary of Delegate & Chair Training",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII B ",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Hiba Imam",
+      position: "Head of PR",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII ",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Arnav Chakraborty",
+      position: "Undersecretary of PR",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Aadithya Menon",
+      position: "Director of Crisis",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Vyga Shijoy",
+      position: "Head of Hospitality",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII ",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Eslin Mary",
+      position: "Undersecretary of Hospitality",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Sanjay Jayesh",
+      position: "Head of IT",
+      bio: "Sanjay leads all things tech — from website development to digital coordination — ensuring a seamless and modern experience.",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII C ",
+      social: {
+        email: "sanjayjayesh123@gmail.com",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Arjun Vasudevan",
+      position: "Head of Media",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII C",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Thejas R Rajeev",
+      position: "Undersecretary of Media",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII C",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Daksha Pratheesh",
+      position: "Head of Journalism",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Zarafa Mohammed Ashraf",
+      position: "Head of Security & Runners",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "XII B",
+      social: {
+        email: "#",
+        linkedin: "#",
+        twitter: "#",
+      },
+    },
+    {
+      name: "Albi Sam",
+      position: "Undersecretary of Security & Runners",
+      bio: "",
+      image: "/placeholder.svg?height=400&width=400",
+      location: "",
+      social: {
+        email: "#",
         linkedin: "#",
         twitter: "#",
       },
@@ -88,33 +292,24 @@ const TeamSection = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#194272]/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
                   {/* Social Links Overlay */}
-                  <div className="absolute bottom-4 left-4 right-4 flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <a
-                      href={`mailto:${member.social.email.replace('excellence.edu', 'newmun.org')}`}
-                      className="w-10 h-10 bg-[#194272]/90 rounded-full flex items-center justify-center hover:bg-[#194272] transition-colors duration-300"
-                    >
+                  {/* <div className="absolute bottom-4 left-4 right-4 flex space-x-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <a href={`mailto:${member.social.email.replace('excellence.edu', 'newmun.org')}`} className="w-10 h-10 bg-[#194272]/90 rounded-full flex items-center justify-center hover:bg-[#194272] transition-colors duration-300">
                       <Mail size={18} className="text-white" />
                     </a>
-                    <a
-                      href={member.social.linkedin}
-                      className="w-10 h-10 bg-[#194272]/90 rounded-full flex items-center justify-center hover:bg-[#194272] transition-colors duration-300"
-                    >
+                    <a href={member.social.linkedin} className="w-10 h-10 bg-[#194272]/90 rounded-full flex items-center justify-center hover:bg-[#194272] transition-colors duration-300">
                       <Linkedin size={18} className="text-white" />
                     </a>
-                    <a
-                      href={member.social.twitter}
-                      className="w-10 h-10 bg-[#194272]/90 rounded-full flex items-center justify-center hover:bg-[#194272] transition-colors duration-300"
-                    >
+                    <a href={member.social.twitter} className="w-10 h-10 bg-[#194272]/90 rounded-full flex items-center justify-center hover:bg-[#194272] transition-colors duration-300">
                       <Twitter size={18} className="text-white" />
                     </a>
-                  </div>
+                  </div> */}
                 </div>
 
                 <div className="p-6">
-                  <div className="flex items-center mb-3">
+                  {/* <div className="flex items-center mb-3">
                     <MapPin className="w-4 h-4 text-[#194272] mr-2" />
                     <span className="text-sm text-gray-500">{member.location}</span>
-                  </div>
+                  </div> */}
 
                   <h3 className="text-2xl font-bold text-[#194272] mb-2">{member.name}</h3>
                   <p className="text-[#194272] font-semibold mb-3">{member.position}</p>
@@ -125,7 +320,7 @@ const TeamSection = () => {
           ))}
         </div>
 
-        {/* Leadership Stats */}
+        {/* Leadership Stats 
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -145,7 +340,7 @@ const TeamSection = () => {
               </div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )
