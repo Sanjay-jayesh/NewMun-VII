@@ -6,7 +6,7 @@ const TeamSection = () => {
   const teamMembers = [
     {
       name: "Ms. Soumi Mondal",
-      position: "Director",
+      position: "MUN Director",
       bio: "She is the Soul of NewMUN since its very inception. Her character echoes the acheivements of the past, the glory of the present and the opportunities of the future.",
       image: "/placeholder.svg?height=400&width=400",
       location: "NIS",
@@ -187,7 +187,7 @@ const TeamSection = () => {
     {
       name: "Sanjay Jayesh",
       position: "Head of IT",
-      bio: "Sanjay leads all things tech — from website development to digital coordination — ensuring a seamless and modern experience.",
+      bio: "Sanjay from Class XII, is our Head of IT this year. Sanjay is a team player and known for his perfection for minute details. Sanjay leads all things tech: from website development to digital coordination. Thus ensuring a seamless and modern experience.",
       image: "/placeholder.svg?height=400&width=400",
       location: "XII C ",
       social: {
