@@ -43,7 +43,7 @@ const ArchivesSection = () => {
   ]
 
   return (
-    <section id="archives" className="py-20 bg-white">
+    <section id="archives" className="py-20 bg-[#6d9eee]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -51,8 +51,10 @@ const ArchivesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 fade-in"
         >
-          <h2 className="text-5xl font-bold mb-6 text-[#194272]">Our Legacy of Excellence</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-5xl font-bold mb-6 text-[#194272]">
+            Our Legacy of Excellence
+          </h2>
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Celebrating milestones, achievements, and the continuous journey of excellence that defines NewMUN.
           </p>
         </motion.div>
@@ -75,14 +77,18 @@ const ArchivesSection = () => {
                     <achievement.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-[#194272] uppercase tracking-wider">{achievement.year}</div>
-                    <div className="text-lg font-bold text-[#194272]">{achievement.stats}</div>
+                    <div className="text-sm font-bold text-white uppercase tracking-wider">
+                      {achievement.year}
+                    </div>
+                    <div className="text-lg font-bold text-white">
+                      {achievement.stats}
+                    </div>
                   </div>
                 </div>
 
                 <h3 className="text-3xl font-bold text-[#194272]">{achievement.title}</h3>
 
-                <p className="text-gray-600 leading-relaxed text-lg">{achievement.description}</p>
+                <p className="text-white leading-relaxed text-lg">{achievement.description}</p>
 
                 <button className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
                   Learn More
@@ -93,7 +99,7 @@ const ArchivesSection = () => {
               {/* Image */}
               <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-[#194272] rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300 opacity-10"></div>
+                  <div className="absolute inset-0 bg-[#194272] rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300 opacity-20"></div>
                   <img
                     src={achievement.image || "/placeholder.svg"}
                     alt={achievement.title}

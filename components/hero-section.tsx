@@ -43,13 +43,13 @@ const HeroSection = () => {
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-50 to-white"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#6d9eee]"
     >
       {/* Background Grid */}
       <div
-        className="hero-bg absolute inset-0 opacity-5"
+        className="hero-bg absolute inset-0 opacity-20"
         style={{
-          backgroundImage: "radial-gradient(circle at 25px 25px, black 2px, transparent 0)",
+          backgroundImage: "radial-gradient(circle at 25px 25px, white 2px, transparent 0)",
           backgroundSize: "50px 50px",
         }}
       />
@@ -63,20 +63,21 @@ const HeroSection = () => {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-4xl md:text-5xl font-bold text-gray-900"
+              className="text-4xl md:text-5xl font-bold text-white"
             >
-              Welcome to <span className="text-[#194272]">NewMUN</span>
+              Welcome to <span className="text-[#194272] underline">NewMUN</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-xl text-gray-600"
+              className="text-xl text-white"
             >
               Building{" "}
-              <FlipWords words={words} className="text-gray-800 font-semibold" /> for Tomorrow
+              <FlipWords words={words} className="text-[#194272] font-semibold" /> for Tomorrow
             </motion.p>
+
           </div>
 
           {/* Logo */}
@@ -99,11 +100,11 @@ const HeroSection = () => {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2"
       >
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center items-start pt-2">
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center items-start pt-2">
           <motion.div
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            className="w-1.5 h-1.5 bg-gray-400 rounded-full"
+            className="w-1.5 h-1.5 bg-white rounded-full"
           />
         </div>
       </motion.div>

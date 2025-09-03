@@ -115,18 +115,21 @@ export default function Home() {
   return (
     <div
       ref={mainRef}
-      className="min-h-screen bg-white text-black overflow-x-hidden"
+      className="min-h-screen bg-[#6d9eee] text-black overflow-x-hidden"
       style={{ scrollPaddingTop: "80px" }}
     >
       <ResizableNavbar />
       <TracingBeam>
-        <div className="relative">
+        <div className="relative w-full">
           <HeroSection />
-          <div className="lg:ml-16">
-            <ArchivesSection />
-            <TeamSection />
-            <CouncilsSection />
-            <TestimonialSection />
+          {/* Full-width blue background with content margin */}
+          <div className="w-full">
+            <div className="lg:ml-16 px-6">
+              <ArchivesSection />
+              <TeamSection />
+              <CouncilsSection />
+              <TestimonialSection />
+            </div>
           </div>
         </div>
       </TracingBeam>

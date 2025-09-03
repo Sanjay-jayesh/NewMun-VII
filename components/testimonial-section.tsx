@@ -8,7 +8,7 @@ const TestimonialSection = () => {
       name: "Alex Thompson",
       role: "Class of 2023, Harvard University",
       content:
-        "Excellence Academy didn't just prepare me for college; it prepared me for life. The innovative teaching methods and supportive environment helped me discover my passion for computer science.",
+        "NewMUN didn't just prepare me for college; it prepared me for life. The innovative teaching methods and supportive environment helped me discover my passion for computer science.",
       rating: 5,
       image: "/placeholder.svg?height=100&width=100",
       category: "Alumni",
@@ -26,7 +26,7 @@ const TestimonialSection = () => {
       name: "David Kim",
       role: "Class of 2022, MIT",
       content:
-        "The STEM programs at Excellence Academy are world-class. The hands-on approach and access to cutting-edge technology gave me a significant advantage in my engineering studies.",
+        "The STEM programs at NewMUN are world-class. The hands-on approach and access to cutting-edge technology gave me a significant advantage in my engineering studies.",
       rating: 5,
       image: "/placeholder.svg?height=100&width=100",
       category: "Alumni",
@@ -44,7 +44,7 @@ const TestimonialSection = () => {
       name: "Robert Chen",
       role: "Parent & School Board Member",
       content:
-        "Excellence Academy sets the gold standard for education. The commitment to both academic excellence and character development is evident in every aspect of the school.",
+        "NewMUN sets the gold standard for education. The commitment to both academic excellence and character development is evident in every aspect of the school.",
       rating: 5,
       image: "/placeholder.svg?height=100&width=100",
       category: "Parent",
@@ -61,7 +61,7 @@ const TestimonialSection = () => {
   ]
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
+    <section id="testimonials" className="py-20 bg-[#6D9EEE]">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -70,7 +70,7 @@ const TestimonialSection = () => {
           className="text-center mb-16 fade-in"
         >
           <h2 className="text-5xl font-bold mb-6 text-[#194272]">What Our Community Says</h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Hear from our students, parents, and alumni about their transformative experiences and the lasting impact of NewMUN.
           </p>
         </motion.div>
@@ -101,7 +101,7 @@ const TestimonialSection = () => {
                 </div>
 
                 {/* Content */}
-                <p className="text-gray-700 leading-relaxed mb-6 flex-grow text-lg">"{testimonial.content.replace('Excellence Academy', 'NewMUN')}"</p>
+                <p className="text-gray-700 leading-relaxed mb-6 flex-grow text-lg">"{testimonial.content}"</p>
 
                 {/* Rating */}
                 <div className="flex mb-6">
@@ -119,38 +119,16 @@ const TestimonialSection = () => {
                   />
                   <div>
                     <h4 className="text-[#194272] font-bold text-lg">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">{testimonial.role.replace('Excellence Academy', 'NewMUN')}</p>
+                    <p className="text-[#194272]/80 text-sm">{testimonial.role}</p>
                   </div>
                 </div>
               </div>
             </motion.div>
           ))}
         </div>
-
-        {/* CTA Section 
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-16 text-center fade-in"
-        >
-          <div className="bg-[#194272] rounded-3xl p-12 text-white">
-            <h3 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h3>
-            <p className="text-blue-100 mb-8 max-w-2xl mx-auto text-lg">
-              Experience the NewMUN difference. Schedule a visit or apply today to begin your journey toward academic excellence and personal growth.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-4 bg-white text-[#194272] font-semibold rounded-full hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                Schedule a Visit
-              </button>
-              <button className="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-[#194272] transition-all duration-300">
-                Apply Now
-              </button>
-            </div>
-          </div>
-        </motion.div> */}
       </div>
     </section>
+
   )
 }
 

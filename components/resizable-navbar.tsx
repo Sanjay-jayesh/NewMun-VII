@@ -55,8 +55,8 @@ const ResizableNavbar = () => {
       transition={{ duration: 0.3 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-200"
-          : "bg-transparent"
+          ? "bg-[#6d9eee] backdrop-blur-md shadow-lg border-b border-[#6d9eee]"
+          : "bg-[#6d9eee]"
       }`}
     >
       <div className="container mx-auto px-6 h-full flex items-center justify-between">
@@ -69,7 +69,7 @@ const ResizableNavbar = () => {
           <img src="/logo.png" alt="NewMUN" className="w-10 h-8" />
           <motion.div
             animate={{ fontSize: isCompact ? "1.25rem" : "1.5rem" }}
-            className="font-semibold text-[#194272]"
+            className="font-semibold text-white"
           >
             NewMUN
           </motion.div>
@@ -81,18 +81,17 @@ const ResizableNavbar = () => {
             <button
               key={item.name}
               onClick={() => handleNavClick(item.href)}
-              className="text-[#194272] hover:text-[#0f2a4f] relative group font-medium cursor-pointer transition-colors duration-300"
+              className="text-white hover:text-gray-200 relative group font-medium cursor-pointer transition-colors duration-300"
             >
               {item.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#194272] group-hover:w-full transition-all duration-300"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300"></span>
             </button>
           ))}
         </div>
 
-
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-black p-2"
+          className="md:hidden text-white p-2"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
@@ -130,7 +129,7 @@ const ResizableNavbar = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden overflow-hidden bg-white border-t border-gray-200"
+            className="md:hidden overflow-hidden bg-[#6d9eee] border-t border-[#6d9eee]"
           >
             <div className="py-4 space-y-2">
               {navItems.map((item) => (
@@ -140,7 +139,7 @@ const ResizableNavbar = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0 }}
-                  className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 rounded-lg font-medium"
+                  className="block w-full text-left py-3 px-4 text-white hover:text-gray-200 hover:bg-[#5b8dd9] transition-all duration-300 rounded-lg font-medium"
                 >
                   {item.name}
                 </motion.button>
