@@ -14,15 +14,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" className="light"> {/* Force light mode */}
-      <body
-        className="bg-background text-foreground antialiased" 
-        style={{ minHeight: '100vh' }}
-      >
+    <html lang="en">
+      <body className="light bg-background text-foreground antialiased min-h-screen">
         {/* Navbar at the top */}
         <ResizableNavbar />
 
