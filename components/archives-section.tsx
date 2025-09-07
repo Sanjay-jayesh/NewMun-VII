@@ -6,12 +6,12 @@ const ArchivesSection = () => {
   const achievements = [
     {
       year: "2024",
-      title: "National Science Fair Champions",
+      title: "Smile Foundation",
       description:
-        "Our students won first place in the National Science Fair with their innovative renewable energy project, showcasing excellence in STEM education.",
+        "In a collective effort to support a noble cause, our students contributed a proportion of funds, which were pooled together and donated to The Smile Foundation. This initiative reflects the values of compassion and social responsibility that our school community upholds.",
       icon: Award,
-      image: "/placeholder.svg?height=300&width=400",
-      stats: "1st Place",
+      image: "/smile.jpg?height=300&width=400",
+      stats: "",
     },
     {
       year: "2021",
@@ -77,10 +77,10 @@ const ArchivesSection = () => {
                     <achievement.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-white uppercase tracking-wider">
+                    <div className="text-sm font-bold text-[#194272] uppercase tracking-wider">
                       {achievement.year}
                     </div>
-                    <div className="text-lg font-bold text-white">
+                    <div className="text-lg font-bold text-[#194272]">
                       {achievement.stats}
                     </div>
                   </div>

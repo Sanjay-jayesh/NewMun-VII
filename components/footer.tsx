@@ -44,12 +44,13 @@ const Footer = () => {
                   key={index}
                   href={social.href}
                   target="_blank"
-                  className={`w-10 h-10 rounded-lg flex items-center justify-center bg-[#194272]/10 text-[#194272] hover:bg-[#194272] hover:text-white transition-all duration-300`}
+                  className="w-12 h-12 rounded-lg flex items-center justify-center bg-[#194272]/10 text-[#194272] hover:bg-[#194272] hover:text-white transition-all duration-300"
                   aria-label={social.icon.name}
                   style={{ color: social.color }}
                 >
-                  <social.icon size={18} />
+                  <social.icon size={22} />
                 </a>
+
               ))}
             </div>
           </motion.div>

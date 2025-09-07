@@ -108,7 +108,7 @@ const TeamSection = () => {
     {
       name: "Thejas R Rajeev",
       position: "Undersecretary of Media",
-      bio: "",
+      bio: "Thejas from Class XII serves as our Undersecretary of Media this year. A visionary with a passion for filmmaking. With his keen eye for cinematography, lighting, and angles, Thejas ensures that every frame he captures is not just a shot, but a memory to be cherished.",
       image: "/placeholder.svg?height=400&width=400",
     },
     {
@@ -146,7 +146,7 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}

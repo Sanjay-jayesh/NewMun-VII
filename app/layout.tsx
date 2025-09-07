@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   title: 'NewMUN',
   description: 'NewMUN',
   generator: 'MR.TNSR',
+  icons: {
+    icon: '/logo.png',
+  },
 }
+
 
 export default function RootLayout({
   children,
