@@ -1,36 +1,33 @@
-import type { Metadata } from 'next'
-import './globals.css'
-import ResizableNavbar from '@/components/resizable-navbar'
-import Footer from '@/components/footer'
+import type { Metadata } from "next"
+import "./globals.css"
+import ResizableNavbar from "@/components/resizable-navbar"
+import Footer from "@/components/footer"
+import { ThemeProvider } from "@/components/theme-provider"
 
 export const metadata: Metadata = {
-  title: 'NewMUN',
-  description: 'NewMUN',
-  generator: 'MR.TNSR',
+  title: "NewMUN",
+  description: "NewMUN",
+  generator: "MR.TNSR",
   icons: {
-    icon: '/logo.png',
+    icon: "/logo.png",
   },
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="light"> {/* Force light mode */}
-      <body
-        className="bg-background text-foreground antialiased" 
-        style={{ minHeight: '100vh' }}
-      >
-        {/* Navbar at the top */}
-        <ResizableNavbar />
+    <html lang="en">
+      <body className="bg-background text-foreground antialiased min-h-screen">
+        {/* ThemeProvider handles light/dark automatically */}
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          {/* Navbar */}
+          <ResizableNavbar />
 
-        {/* Page content */}
-        <main>{children}</main>
+          {/* Page content */}
+          <main>{children}</main>
 
-        {/* Footer at the bottom */}
-        <Footer />
+          {/* Footer */}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   )
