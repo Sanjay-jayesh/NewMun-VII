@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import "./globals.css"
 import ResizableNavbar from "@/components/resizable-navbar"
 import Footer from "@/components/footer"
-import { ThemeProvider } from "@/components/theme-provider"
+import LightModeProvider from "@/components/LightModeProvider"
 
 export const metadata: Metadata = {
   title: "NewMUN",
@@ -17,17 +17,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-background text-foreground antialiased min-h-screen">
-        {/* ThemeProvider handles light/dark automatically */}
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          {/* Navbar */}
-          <ResizableNavbar />
+        {/* Force light mode */}
+        <LightModeProvider />
 
-          {/* Page content */}
-          <main>{children}</main>
+        {/* Navbar */}
+        <ResizableNavbar />
 
-          {/* Footer */}
-          <Footer />
-        </ThemeProvider>
+        {/* Page content */}
+        <main>{children}</main>
+
+        {/* Footer */}
+        <Footer />
       </body>
     </html>
   )
