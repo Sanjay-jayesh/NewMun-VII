@@ -5,6 +5,7 @@ import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import ResizableNavbar from "@/components/resizable-navbar"
 import TracingBeam from "@/components/ui/tracing-beam"
+import PrincipalDesk from "@/components/PrincipalDesk"
 
 const HeroSection = dynamic(() => import("@/components/hero-section"), { ssr: false })
 const ArchivesSection = dynamic(() => import("@/components/archives-section"), { ssr: false })
@@ -126,6 +127,7 @@ export default function Home() {
           <div className="w-full">
             <div className="lg:ml-16 px-6">
               <ArchivesSection />
+              <PrincipalDesk />
               <TeamSection />
               <CouncilsSection />
               <TestimonialSection />

@@ -22,6 +22,7 @@ const ResizableNavbar = () => {
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Archives", href: "#archives" },
+    { name: "Principal", href: '#principal'},
     { name: "Team", href: "#team" },
     { name: "Councils", href: "#councils" },
     { name: "Testimonials", href: "#testimonials" },
