@@ -31,13 +31,13 @@ const TeamSection = () => {
       name: "Mohammed Aarib Ali Khan",
       position: "Member of Research",
       bio: "",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Ali.jpg?height=400&width=400",
     },
     {
       name: "Neil Jose",
       position: "Member of Research",
       bio: "Neil Jose, a Class 11 student and member of the Research & Development team, is known for his curiosity, hardworking mentality and commitment to innovative problem-solving. With enormous contributions to the topics at hand, his department shall lead every council, involving fruitful debates and by maintaining a constant energy throughout.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Neil.jpg?height=400&width=400",
     },
     {
       name: "Alfia Rejan Varghese",

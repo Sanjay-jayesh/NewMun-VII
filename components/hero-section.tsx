@@ -16,11 +16,11 @@ const HeroSection = () => {
     const ctx = gsap.context(() => {
       if (logoRef.current) {
         gsap.to(logoRef.current, {
-          y: -20,
-          duration: 3,
-          ease: "power2.inOut",
-          yoyo: true,
-          repeat: -1,
+          y: -40,           // bigger bounce for visibility
+          duration: 2.5,      // speed of the bounce
+          ease: "power1.inOut",
+          yoyo: true,       // makes it go back and forth like a yo-yo
+          repeat: -1,       // infinite loop
         })
       }
 
@@ -43,7 +43,7 @@ const HeroSection = () => {
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#6d9eee]"
+      className="relative min-h-screen flex items-center justify-center bg-[#6d9eee]"
     >
       {/* Background Grid */}
       <div
@@ -65,7 +65,7 @@ const HeroSection = () => {
               transition={{ duration: 0.8, ease: "easeOut" }}
               className="text-4xl md:text-5xl font-bold text-white"
             >
-              Welcome to <span className="text-[#194272] underline">NewMUN</span>
+              Welcome to <span className="text-[#194272] ">NewMUN</span>
             </motion.h1>
 
             <motion.p
@@ -77,7 +77,6 @@ const HeroSection = () => {
               Building{" "}
               <FlipWords words={words} className="text-[#194272] font-semibold" /> for Tomorrow
             </motion.p>
-
           </div>
 
           {/* Logo */}
@@ -86,9 +85,9 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="hidden lg:flex justify-center"
+            className="flex justify-center"
           >
-            <img src="/logo.png" alt="NewMUN" className="max-w-md" />
+            <img src="/New logo.png" alt="NewMUN" className="w-[600px] max-w-full" />
           </motion.div>
         </div>
       </div>
