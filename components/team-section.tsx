@@ -6,13 +6,13 @@ const TeamSection = () => {
     {
       name: "Ms. Soumi Mondal",
       position: "MUN Director",
-      bio: "She is the Soul of NewMUN since its very inception. Her character echoes the achievements of the past, the glory of the present and the opportunities of the future.",
+      bio: "",
       image: "/placeholder.svg?height=400&width=400",
     },
     {
       name: "Fidel Marakar",
       position: "Student Director",
-      bio: "Fidel leads this year's MUN Team alongside Ms. Soumi with a profound passion for international affairs and politics.",
+      bio: "",
       image: "/placeholder.svg?height=400&width=400",
     },
     {
@@ -30,7 +30,7 @@ const TeamSection = () => {
     {
       name: "Mohammed Aarib Ali Khan",
       position: "Member of Research",
-      bio: "",
+      bio: "Mohammed Aarib, a student of class XI, is one of our dedicated  members of the Department of Research and Development. With a strong specialization in data collection, Aarib plays a major role in identifying compelling and  interesting topics to be debated upon, making the event all the more engaging.",
       image: "/Ali.jpg?height=400&width=400",
     },
     {
@@ -61,7 +61,7 @@ const TeamSection = () => {
       name: "S. Mridini",
       position: "Undersecretary of Delegate & Chair Training",
       bio: "Mridini Sabarinathan, is a class XII student, and takes the role of the Under-Secretary of the Department of Delegate and Chair Training this year. She thrives on turning chaos into order, sparking new ideas, and ensuring that every chair and delegate feels confident and prepared. Known for her energy and fresh perspective, she is committed to creating a smooth, engaging, and truly unforgettable MUN experience for all participants.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Mridini.jpg?height=400&width=400",
     },
     {
       name: "Hiba Imam",
@@ -73,7 +73,7 @@ const TeamSection = () => {
       name: "Arnav Chakraborty",
       position: "Undersecretary of PR",
       bio: "",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Arnav.jpg?height=400&width=400",
     },
     {
       name: "Aadithya Menon",
@@ -114,24 +114,24 @@ const TeamSection = () => {
     {
       name: "Daksha Pratheesh",
       position: "Head of Journalism",
-      bio: "",
+      bio: "Daksha Pratheesh, of class XII is our Head of Journalism for this year. Known for being organized, approachable, and calm under pressure, Daksha values teamwork and open communication. With a knack for listening to ideas and encouraging participation, she brings a collaborative and positive leadership style that helps the team work smoothly and effectively.",
       image: "/placeholder.svg?height=400&width=400",
     },
     {
       name: "Zurafa Mohamed Ashraf",
       position: "Head of Security & Runners",
       bio: "Zurafa Mohamed Ashraf, a student of Class XII, holds the position of the Head of Security for NEWMUN VII. She is a passionate individual in the field of public speaking and debating. As the Head Girl of the school, she is known for her leadership qualities and enthusiasm in maintaining the integrity of any event.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Zurafa.jpg?height=400&width=400",
     },
     {
       name: "Albi Sam",
       position: "Undersecretary of Security & Runners",
       bio: "",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Albi.jpg?height=400&width=400",
     },
   ]
 
-   return (
+  return (
     <section id="team" className="py-20 bg-[#6d9eee]">
       <div className="container mx-auto px-6">
         {/* Section Heading */}
@@ -147,31 +147,28 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Group Picture FIRST */}
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="lg:col-span-3 flex flex-col items-center"
-            >
-              <div className="overflow-hidden relative group w-full">
-                <div className="relative w-full h-[500px] md:h-[600px] bg-[#6d9eee] flex items-center justify-center rounded-3xl">
-                  <img
-                    src="/smile.jpg"
-                    alt="Our Team"
-                    className="max-h-full max-w-full object-contain transition-transform duration-500 rounded-3xl border-8 border-white group"
-                  />
-                </div>
-              </div>
-              {/* Caption */}
-              <p className="mt-4 text-xl md:text-2xl font-semibold text-[#194272] text-center">
-                Team NEWMun VII 2025
-              </p>
-            </motion.div>
+        {/* GROUP PICTURE */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-12 flex flex-col items-center"
+        >
+          <div className="overflow-hidden relative w-full max-w-5xl shadow-lg rounded-3xl">
+            <img
+              src="/smile.jpg"
+              alt="Our Team"
+              className="w-full h-auto object-cover rounded-3xl"
+            />
+          </div>
+          <p className="mt-4 text-xl md:text-2xl font-semibold text-[#194272] text-center">
+            Team NEWMun VII 2025
+          </p>
+        </motion.div>
 
-          {/* Individual Cards */}
+        {/* Individual Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <motion.div
               key={member.name}

@@ -1,5 +1,5 @@
 "use client"
-import { useRef, useEffect } from "react"
+import { useRef, useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -12,15 +12,38 @@ const HeroSection = () => {
   const logoRef = useRef<HTMLDivElement>(null)
   const words = ["Excellence", "Innovation", "Leadership", "Success", "Future"]
 
+  // Countdown state
+  const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+
+  useEffect(() => {
+    const target = new Date("2025-11-07T00:00:00").getTime()
+    const interval = setInterval(() => {
+      const now = new Date().getTime()
+      const difference = target - now
+
+      if (difference <= 0) {
+        clearInterval(interval)
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+      } else {
+        const days = Math.floor(difference / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+        const seconds = Math.floor((difference % (1000 * 60)) / 1000)
+        setTimeLeft({ days, hours, minutes, seconds })
+      }
+    }, 1000)
+    return () => clearInterval(interval)
+  }, [])
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (logoRef.current) {
         gsap.to(logoRef.current, {
-          y: -40,           // bigger bounce for visibility
-          duration: 2.5,      // speed of the bounce
+          y: -40,
+          duration: 2.5,
           ease: "power1.inOut",
-          yoyo: true,       // makes it go back and forth like a yo-yo
-          repeat: -1,       // infinite loop
+          yoyo: true,
+          repeat: -1,
         })
       }
 
@@ -43,7 +66,7 @@ const HeroSection = () => {
     <section
       id="home"
       ref={heroRef}
-      className="relative min-h-screen flex items-center justify-center bg-[#6d9eee]"
+      className="relative min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#6d9eee] px-6 py-20 overflow-hidden"
     >
       {/* Background Grid */}
       <div
@@ -54,42 +77,68 @@ const HeroSection = () => {
         }}
       />
 
-      {/* Content */}
-      <div className="container mx-auto px-6 py-20 z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Text Section */}
-          <div className="text-center lg:text-left space-y-6">
-            <motion.h1
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-4xl md:text-5xl font-bold text-white"
-            >
-              Welcome to <span className="text-[#194272] ">NewMUN</span>
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-              className="text-xl text-white"
-            >
-              Building{" "}
-              <FlipWords words={words} className="text-[#194272] font-semibold" /> for Tomorrow
-            </motion.p>
-          </div>
-
-          {/* Logo */}
+      {/* Text + Logo */}
+      <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center w-full gap-12 z-10">
+        {/* Text Section */}
+        <div className="text-center lg:text-left lg:w-1/2 flex flex-col">
+          {/* Welcome + NewMUN */}
           <motion.div
-            ref={logoRef}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
-            className="flex justify-center"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="mb-6"
           >
-            <img src="/New logo.png" alt="NewMUN" className="w-[600px] max-w-full" />
+            <h1 className="text-3xl md:text-5xl font-bold text-white">
+              Welcome to
+              <br />
+              <span className="text-6xl md:text-7xl font-bold text-[#194272]">NewMUN</span>
+            </h1>
           </motion.div>
+
+          {/* Flipping Words */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            className="text-xl text-white mb-20" // <-- mb-16 pushes countdown further down
+          >
+            Building <FlipWords words={words} className="font-semibold text-[#194272]" /> for Tomorrow
+          </motion.div>
+
+          {/* Countdown */}
+          <div className="w-full flex flex-col items-center">
+            <p className="text-[#194272] font-bold text-lg mb-2 text-center">Days until Conference</p>
+            <div className="w-full max-w-5xl bg-white/20 backdrop-blur-md rounded-3xl flex justify-between px-6 py-4">
+              <div className="flex-1 text-center">
+                <p className="text-3xl md:text-4xl font-bold text-white">{timeLeft.days}</p>
+                <p className="text-sm font-semibold text-[#194272]">Days</p>
+              </div>
+              <div className="flex-1 text-center">
+                <p className="text-3xl md:text-4xl font-bold text-white">{timeLeft.hours}</p>
+                <p className="text-sm font-semibold text-[#194272]">Hours</p>
+              </div>
+              <div className="flex-1 text-center">
+                <p className="text-3xl md:text-4xl font-bold text-white">{timeLeft.minutes}</p>
+                <p className="text-sm font-semibold text-[#194272]">Minutes</p>
+              </div>
+              <div className="flex-1 text-center">
+                <p className="text-3xl md:text-4xl font-bold text-white">{timeLeft.seconds}</p>
+                <p className="text-sm font-semibold text-[#194272]">Seconds</p>
+              </div>
+            </div>
+          </div>
         </div>
+
+        {/* Logo */}
+        <motion.div
+          ref={logoRef}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
+          className="lg:w-1/2 flex justify-center mt-10 lg:mt-0"
+        >
+          <img src="/New logo.png" alt="NewMUN" className="w-[550px] max-w-full" />
+        </motion.div>
       </div>
 
       {/* Scroll Indicator */}

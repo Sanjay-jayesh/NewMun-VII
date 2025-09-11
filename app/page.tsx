@@ -1,5 +1,6 @@
 "use client"
-import { useEffect, useRef } from "react"
+
+import { useEffect, useRef, useState } from "react"
 import dynamic from "next/dynamic"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
@@ -17,14 +18,26 @@ gsap.registerPlugin(ScrollTrigger)
 
 export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null)
+  const [revealed, setRevealed] = useState(false) // when true, show archives / principal / rest
 
+  // 1) Ensure hero occupies viewport and reveal the rest AFTER first paint(s)
   useEffect(() => {
-    // Force scroll to top after hydration
-    setTimeout(() => {
-      window.scrollTo({ top: 0, left: 0, behavior: "auto" })
-    }, 0)
+    // Force initial scroll to top (avoid any previous scroll position)
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" })
 
-    // Smooth scroll for nav clicks
+    // Wait for two animation frames — ensures browser had a paint opportunity for the hero wrapper
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setRevealed(true)
+      })
+    })
+  }, [])
+
+  // 2) Initialize GSAP AFTER we've revealed the rest (so elements exist & measurements are stable)
+  useEffect(() => {
+    if (!revealed) return
+
+    // enable smooth nav scroll while GSAP is active
     document.documentElement.style.scrollBehavior = "smooth"
 
     const ctx = gsap.context(() => {
@@ -111,7 +124,7 @@ export default function Home() {
       ctx.revert()
       document.documentElement.style.scrollBehavior = "auto"
     }
-  }, [])
+  }, [revealed])
 
   return (
     <div
@@ -120,11 +133,21 @@ export default function Home() {
       style={{ scrollPaddingTop: "80px" }}
     >
       <ResizableNavbar />
+
       <TracingBeam>
         <div className="relative w-full">
-          <HeroSection />
-          {/* Full-width blue background with content margin */}
-          <div className="w-full">
+          {/* HERO: force it to occupy full viewport so nothing below can peek up */}
+          <div id="hero" className="min-h-screen bg-[#6d9eee]">
+            <HeroSection />
+          </div>
+
+          {/* OTHER SECTIONS: kept in DOM but hidden until `revealed` is true.
+              Using opacity + pointer-events avoids layout shifts and avoids blank page. */}
+          <div
+            className={`w-full transition-opacity duration-300 ${
+              revealed ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            } bg-[#6d9eee]`}
+          >
             <div className="lg:ml-16 px-6">
               <ArchivesSection />
               <PrincipalDesk />
