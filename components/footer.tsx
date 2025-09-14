@@ -1,3 +1,4 @@
+
 "use client"
 import { motion } from "motion/react"
 import { Instagram, Youtube, GraduationCap } from "lucide-react"
