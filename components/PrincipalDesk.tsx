@@ -10,6 +10,7 @@ const PrincipalDesk = () => {
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16 fade-in"
         >
@@ -22,8 +23,9 @@ const PrincipalDesk = () => {
         <motion.div
           initial={{ opacity: 0, y: 100 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start fade-in macbook-scroll"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start fade-in"
         >
           {/* Principal’s Words */}
           <div className="space-y-6 relative">
@@ -31,38 +33,41 @@ const PrincipalDesk = () => {
             <span className="text-8xl text-white/80 font-serif absolute -top-12 -left-6 select-none">“</span>
 
             <p className="italic font-serif font-semibold text-lg leading-relaxed text-white">
-                Dear Delegates, Faculty and Readers,
+              Dear Delegates, Faculty and Readers,
               <br /><br />
-                It is with immense admiration that I extend my warmest greetings to all participants of this year’s 
-                (2025) School Model United Nations. Watching our student’s step into the roles of diplomats, negotiators, 
-                and changemakers fills me with hope for the future.
+              It is with immense admiration that I extend my warmest greetings to all participants of this year’s 
+              (2025) School Model United Nations. Watching our student’s step into the roles of diplomats, negotiators, 
+              and changemakers fills me with hope for the future.
               <br />
-                MUN is more than an academic exercise—it is a powerful platform where young minds engage with global challenges,
-                practice empathy, and learn the art of respectful dialogue. In a world that often feels divided, your commitment 
-                to collaboration and understanding is a beacon of possibility.
+              MUN is more than an academic exercise—it is a powerful platform where young minds engage with global challenges,
+              practice empathy, and learn the art of respectful dialogue. In a world that often feels divided, your commitment 
+              to collaboration and understanding is a beacon of possibility.
               <br />
-                To every delegate who research tirelessly, debate passionately, and listen deeply: you are already shaping the world.
-                May this experience ignite a lifelong passion for leadership, justice, and peace.
+              To every delegate who research tirelessly, debate passionately, and listen deeply: you are already shaping the world.
+              May this experience ignite a lifelong passion for leadership, justice, and peace.
               <br /><br />
-                Thanks
+              Thanks
             </p>
 
             {/* Signature */}
             <div className="mt-8 text-right">
-            <p className="font-extrabold text-2xl text-[#194272]">Mr. Kollath Gopinath Menon</p>
-            <p className="text-semibold text-xl text-[#ffffff]">Principal</p>
-            <p className="text-sm text-2xl text-[#ffffff]"></p>
+              <p className="font-extrabold text-2xl text-[#194272]">Mr. Kollath Gopinath Menon</p>
+              <p className="text-semibold text-xl text-white">Principal</p>
             </div>
           </div>
 
           {/* Principal’s Photo */}
           <div className="flex justify-center">
-            <div className="relative group">
+            <div className="relative group w-full max-w-md lg:max-w-lg">
+
+              {/* Decorative Background Box */}
               <div className="absolute inset-0 bg-[#194272] rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300 opacity-20"></div>
+
+              {/* Principal Image */}
               <img
                 src="/Principal.jpg"
                 alt="Principal"
-                className="relative w-full h-80 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500 max-w-sm"
+                className="relative w-full h-auto object-contain rounded-3xl shadow-2xl transition-transform duration-500 group-hover:scale-105"
               />
             </div>
           </div>

@@ -6,7 +6,7 @@ const ArchivesSection = () => {
   const achievements = [
     {
       year: "2024",
-      title: "Smile Foundation",
+      title: "Smile Foundations",
       description:
         "In a collective effort to support a noble cause, our students contributed a proportion of funds, which were pooled together and donated to The Smile Foundation. This initiative reflects the values of compassion and social responsibility that our school community upholds.",
       icon: Award,
@@ -90,8 +90,13 @@ const ArchivesSection = () => {
 
                 <p className="text-white leading-relaxed text-lg">{achievement.description}</p>
 
-                <button className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
-                  Learn More
+                <button
+                  className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md"
+                  {...(index === 0
+                    ? { onClick: () => window.open("https://drive.google.com/drive/mobile/folders/13E62BnK0KSN0KAMmu_nP8uw_SJE2nbQV?usp=share_link&fbclid=PAdGRjcAMpRCdleHRuA2FlbQIxMQABp0mP40Fcj_wj2MD5y91Ers8TjWKlE4KHYnluYS1p-ZnmNdjB6jU4LFrP6hpi_aem_oZaLE3BjQK0Dn-xwwv4Ltw", "_blank") }
+                    : {})}
+                >
+                  See More
                   <Calendar className="w-4 h-4 ml-2" />
                 </button>
               </div>
