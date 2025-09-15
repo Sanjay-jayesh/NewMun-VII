@@ -4,16 +4,15 @@
 
 /* Prevent Samsung Internet and other WebKit browsers from forcing dark mode */
 html {
-  color-scheme: light dark;       /* supports both light and dark modes */
-  -webkit-force-dark: none;       /* disables forced dark mode */
+  color-scheme: light;       /* always light mode */
+  -webkit-force-dark: none;  /* disables forced dark mode */
 }
 
 /* Body defaults */
 body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
-  background-color: hsl(var(--background));
-  color: hsl(var(--foreground));
+  @apply bg-background text-foreground;
 }
 
 /* Custom utilities */
@@ -23,10 +22,9 @@ body {
   }
 }
 
-/* CSS Variables for light/dark mode */
+/* CSS Variables for light mode only */
 @layer base {
   :root {
-    /* Light mode */
     --background: 0 0% 100%;           /* #ffffff */
     --foreground: 0 0% 3.9%;           /* #0a0a0a */
     --card: 0 0% 100%;                  /* #ffffff */
@@ -63,44 +61,8 @@ body {
     --sidebar-ring: 217.2 91.2% 59.8%;   /* #f2e23b */
   }
 
-  .dark {
-    /* Dark mode */
-    --background: 0 0% 3.9%;          /* #0a0a0a */
-    --foreground: 0 0% 98%;           /* #fafafa */
-    --card: 0 0% 3.9%;                /* #0a0a0a */
-    --card-foreground: 0 0% 98%;      /* #fafafa */
-    --popover: 0 0% 3.9%;             /* #0a0a0a */
-    --popover-foreground: 0 0% 98%;   /* #fafafa */
-    --primary: 0 0% 98%;              /* #fafafa */
-    --primary-foreground: 0 0% 9%;    /* #171717 */
-    --secondary: 0 0% 14.9%;          /* #262626 */
-    --secondary-foreground: 0 0% 98%; /* #fafafa */
-    --muted: 0 0% 14.9%;              /* #262626 */
-    --muted-foreground: 0 0% 63.9%;   /* #a3a3a3 */
-    --accent: 0 0% 14.9%;             /* #262626 */
-    --accent-foreground: 0 0% 98%;    /* #fafafa */
-    --destructive: 0 62.8% 30.6%;     /* #992626 */
-    --destructive-foreground: 0 0% 98%; /* #fafafa */
-    --border: 0 0% 14.9%;             /* #262626 */
-    --input: 0 0% 14.9%;              /* #262626 */
-    --ring: 0 0% 83.1%;               /* #d4d4d4 */
-    --sidebar-background: 240 5.9% 10%; /* #1a1c1f */
-    --sidebar-foreground: 240 4.8% 95.9%; /* #f4f4f4 */
-    --sidebar-primary: 224.3 76.3% 48%;  /* #345f7a */
-    --sidebar-primary-foreground: 0 0% 100%; /* #ffffff */
-    --sidebar-accent: 240 3.7% 15.9%;      /* #0c0e12 */
-    --sidebar-accent-foreground: 240 4.8% 95.9%; /* #f4f4f4 */
-    --sidebar-border: 240 3.7% 15.9%;      /* #0c0e12 */
-    --sidebar-ring: 217.2 91.2% 59.8%;     /* #f2e23b */
-  }
-
   /* Apply border color globally */
   * {
     @apply border-border;
-  }
-
-  /* Ensure body uses variables */
-  body {
-    @apply bg-background text-foreground;
   }
 }

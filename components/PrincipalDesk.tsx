@@ -31,22 +31,27 @@ const PrincipalDesk = () => {
             <span className="text-8xl text-white/80 font-serif absolute -top-12 -left-6 select-none">“</span>
 
             <p className="italic font-serif font-semibold text-lg leading-relaxed text-white">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt mollit anim id est laborum.
+                Dear Delegates, Faculty and Readers,
               <br /><br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                incididunt ut labore et dolore magna aliqua. Ut enim ad
+                It is with immense admiration that I extend my warmest greetings to all participants of this year’s 
+                (2025) School Model United Nations. Watching our student’s step into the roles of diplomats, negotiators, 
+                and changemakers fills me with hope for the future.
+              <br />
+                MUN is more than an academic exercise—it is a powerful platform where young minds engage with global challenges,
+                practice empathy, and learn the art of respectful dialogue. In a world that often feels divided, your commitment 
+                to collaboration and understanding is a beacon of possibility.
+              <br />
+                To every delegate who research tirelessly, debate passionately, and listen deeply: you are already shaping the world.
+                May this experience ignite a lifelong passion for leadership, justice, and peace.
+              <br /><br />
+                Thanks
             </p>
 
             {/* Signature */}
             <div className="mt-8 text-right">
-            <p className="font-extrabold text-1xl text-[#194272]">Mr. K Gopinath Menon</p>
-            <p className="text-sm text-2xl text-[#ffffff]">Principal</p>
-            <p className="text-sm text-2xl text-[#ffffff]">New Indian School Bahrain</p>
+            <p className="font-extrabold text-2xl text-[#194272]">Mr. Kollath Gopinath Menon</p>
+            <p className="text-semibold text-xl text-[#ffffff]">Principal</p>
+            <p className="text-sm text-2xl text-[#ffffff]"></p>
             </div>
           </div>
 
@@ -55,7 +60,7 @@ const PrincipalDesk = () => {
             <div className="relative group">
               <div className="absolute inset-0 bg-[#194272] rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300 opacity-20"></div>
               <img
-                src="/K GOPI.jpg"
+                src="/Principal.jpg"
                 alt="Principal"
                 className="relative w-full h-80 object-cover rounded-3xl shadow-2xl group-hover:scale-105 transition-transform duration-500 max-w-sm"
               />

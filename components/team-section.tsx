@@ -14,13 +14,13 @@ const TeamSection = () => {
       name: "Ms. Soumi Mondal",
       position: "MUN Director",
       bio: "",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Soumi.jpg?height=400&width=400",
     },
     {
       name: "Fidel Marakar",
       position: "Student Director",
       bio: "",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Fidel.jpg?height=400&width=400",
     },
     {
       name: "Nahreen Mariyam Shameer",
@@ -32,7 +32,7 @@ const TeamSection = () => {
       name: "Ahan Shailendra Kamble",
       position: "Deputy Secretary General",
       bio: "",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Ahan.jpg?height=400&width=400",
     },
     {
       name: "Mohammed Aarib Ali Khan",
@@ -50,7 +50,7 @@ const TeamSection = () => {
       name: "Alfia Rejan Varghese",
       position: "Head of Finance & Logistics",
       bio: "",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Alfia.jpg?height=400&width=400",
     },
     {
       name: "Ansh Shetty",
@@ -86,7 +86,7 @@ const TeamSection = () => {
       name: "Aadithya Menon",
       position: "Director of Crisis",
       bio: "Aadithya S Menon of Grade 11 is an avid aviation enthusiast and a passionate pianist. He takes up the role of our dedicated Crisis Director for NewMUN VII. Aadithya combines his creativity and experience to create a dynamic environment for our delegates to work and collaborate effectively.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Aadithya.jpg?height=400&width=400",
     },
     {
       name: "Vyga Shijoy",
@@ -122,7 +122,7 @@ const TeamSection = () => {
       name: "Daksha Pratheesh",
       position: "Head of Journalism",
       bio: "Daksha Pratheesh, of class XII is our Head of Journalism for this year. Known for being organized, approachable, and calm under pressure, Daksha values teamwork and open communication. With a knack for listening to ideas and encouraging participation, she brings a collaborative and positive leadership style that helps the team work smoothly and effectively.",
-      image: "/placeholder.svg?height=400&width=400",
+      image: "/Daksha.jpg?height=400&width=400",
     },
     {
       name: "Zurafa Mohamed Ashraf",

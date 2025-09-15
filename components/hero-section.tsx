@@ -16,7 +16,7 @@ const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
-    const target = new Date("2025-11-07T00:00:00").getTime()
+    const target = new Date("2025-11-14T08:00:00").getTime()
     const interval = setInterval(() => {
       const now = new Date().getTime()
       const difference = target - now

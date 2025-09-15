@@ -2,7 +2,6 @@ import type { Metadata } from "next"
 import "./globals.css"
 import ResizableNavbar from "@/components/resizable-navbar"
 import Footer from "@/components/footer"
-import LightModeProvider from "@/components/LightModeProvider"
 
 export const metadata: Metadata = {
   title: "NewMUN",
@@ -15,11 +14,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="light">
       <body className="bg-background text-foreground antialiased min-h-screen">
-        {/* Light mode logic */}
-        <LightModeProvider />
-
         {/* Navbar */}
         <ResizableNavbar />
 
