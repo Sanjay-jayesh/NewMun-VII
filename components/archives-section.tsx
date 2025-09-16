@@ -12,6 +12,7 @@ const ArchivesSection = () => {
       icon: Award,
       image: "/smile.jpg?height=300&width=400",
       stats: "",
+      link: "https://drive.google.com/drive/mobile/folders/13E62BnK0KSN0KAMmu_nP8uw_SJE2nbQV?usp=share_link"
     },
     {
       year: "2021",
@@ -21,6 +22,7 @@ const ArchivesSection = () => {
       icon: BookOpen,
       image: "/placeholder.svg?height=300&width=400",
       stats: "100% Digital",
+      link: "#"
     },
     {
       year: "2023",
@@ -30,6 +32,7 @@ const ArchivesSection = () => {
       icon: Users,
       image: "/placeholder.svg?height=300&width=400",
       stats: "500+ Students",
+      link: "#"
     },
     {
       year: "2022",
@@ -39,6 +42,7 @@ const ArchivesSection = () => {
       icon: TrendingUp,
       image: "/placeholder.svg?height=300&width=400",
       stats: "State Award",
+      link: "#"
     },
   ]
 
@@ -90,15 +94,15 @@ const ArchivesSection = () => {
 
                 <p className="text-white leading-relaxed text-lg">{achievement.description}</p>
 
-                <button
+                <a
+                  href={achievement.link}
+                  target={achievement.link !== "#" ? "_blank" : undefined}
+                  rel={achievement.link !== "#" ? "noopener noreferrer" : undefined}
                   className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md"
-                  {...(index === 0
-                    ? { onClick: () => window.open("https://drive.google.com/drive/mobile/folders/13E62BnK0KSN0KAMmu_nP8uw_SJE2nbQV?usp=share_link&fbclid=PAdGRjcAMpRCdleHRuA2FlbQIxMQABp0mP40Fcj_wj2MD5y91Ers8TjWKlE4KHYnluYS1p-ZnmNdjB6jU4LFrP6hpi_aem_oZaLE3BjQK0Dn-xwwv4Ltw", "_blank") }
-                    : {})}
                 >
-                  See More
+                  {achievement.link !== "#" ? "2024 Snaps" : "Learn More"}
                   <Calendar className="w-4 h-4 ml-2" />
-                </button>
+                </a>
               </div>
 
               {/* Image */}

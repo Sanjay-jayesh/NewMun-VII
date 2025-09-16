@@ -7,22 +7,19 @@ export const metadata: Metadata = {
   title: "NewMUN",
   description: "NewMUN",
   generator: "MR.TNSR",
-  icons: {
-    icon: "/logo.png",
-  },
+  icons: { icon: "/logo.png" },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="light">
       <body className="bg-background text-foreground antialiased min-h-screen">
-        {/* Navbar */}
+        {/* Client component */}
         <ResizableNavbar />
 
-        {/* Page content */}
         <main>{children}</main>
 
-        {/* Footer */}
+        {/* Client component */}
         <Footer />
       </body>
     </html>

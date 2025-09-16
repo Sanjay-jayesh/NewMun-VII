@@ -11,8 +11,8 @@ const CouncilsSection = () => {
       name: "United Nations Security Council",
       description: (
         <>
-          ● South China Sea Issue <br />
-          ● Myanmar Issue
+          ● The Impact of Climate Change on International Peace and Security <br />
+          ● Protecting Children in Armed Conflict
         </>
       ),
       image: "/UNSC.png?height=300&width=400",
@@ -33,29 +33,51 @@ const CouncilsSection = () => {
       name: "European Union",
       description: (
         <>
-          ● Freedom of the Press and Civil Society in the EU <br />
-          ● Extension of EU into the Balkans
+          ● Modernising the GDPR: Safeguarding Data Privacy in the Age of AI and Emerging Technologies <br />
+          ● Promoting Green Technology and Sustainable Innovation in the European Union
         </>
       ),
-      image: "/European Union.png?height=300&width=400",
+      image: "/EU.jpg?height=300&width=400",
       requirements: "Grades 9-12",
     },
     {
       name: "Lok Sabha",
       description: (
         <>
-          ● Narcotics Among Youth and the Involvement of Pharmaceuticals <br />
-          ● Border Security and Prevention of Attacks
+          ● Discussion on the Framework for Promotion and Regulation of Online Gaming in India <br />
+          ● Deliberation on Implementing the National Education Policy to Enhance Quality and Accessibility of Education
         </>
       ),
       image: "/Lok_Sabha.svg?height=300&width=400",
       requirements: "Grades 9-12",
     },
     {
+      name: "United Nations Office for Outer Space Affairs",
+      description: (
+        <>
+          ● Ethical Concerns of Human Settlement on Other Planets <br />
+          ● Ethical Concerns on Space Law and Governance
+        </>
+      ),
+      image: "/UNOOSA.jpg?height=300&width=400",
+      requirements: "Grades 9-12",
+    },
+    {
+      name: "International Monetary Fund",
+      description: (
+        <>
+          ● The COVID-19 Economic Crisis (2020–2021) <br />
+          ● Crime in the world of Cryptocurrency
+        </>
+      ),
+      image: "/IMF.png?height=300&width=400",
+      requirements: "Grades 9-12",
+    },
+    {
       name: "Fédération Internationale de l'Automobile",
       description: (
         <>
-          ● Standardization VS Innovation: Freedom of Team in Car Design <br />
+          ● Standardization VS Innovation: Freedom of Teams in Car Design <br />
           ● San Marino Grand Prix 1994
         </>
       ),
@@ -106,9 +128,11 @@ const CouncilsSection = () => {
   return (
     <section id="councils" className="py-20 bg-[#6d9eee]">
       <div className="container mx-auto px-6">
+        {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16 fade-in"
         >
@@ -122,6 +146,7 @@ const CouncilsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-12 fade-in"
         >
@@ -154,6 +179,7 @@ const CouncilsSection = () => {
               key={`${activeTab}-${council.name}`}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="fade-in macbook-scroll group"
             >
@@ -166,8 +192,6 @@ const CouncilsSection = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-[#194272]/10 group-hover:bg-[#194272]/5 transition-colors duration-300" />
-
-                  {/* Level Badge */}
                   <div className="absolute top-6 right-6">
                     <div
                       className={`px-3 py-1 rounded-full text-sm font-semibold ${
