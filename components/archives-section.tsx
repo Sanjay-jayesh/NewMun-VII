@@ -100,7 +100,7 @@ const ArchivesSection = () => {
                   rel={achievement.link !== "#" ? "noopener noreferrer" : undefined}
                   className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md"
                 >
-                  {achievement.link !== "#" ? "2024 Snaps" : "Learn More"}
+                  {achievement.link !== "#" ? "See More" : "Learn More"}
                   <Calendar className="w-4 h-4 ml-2" />
                 </a>
               </div>

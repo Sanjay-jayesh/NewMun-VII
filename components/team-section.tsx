@@ -116,7 +116,7 @@ const TeamSection = () => {
       name: "Thejas R Rajeev",
       position: "Undersecretary of Media",
       bio: "Thejas from Class XII serves as our Undersecretary of Media this year. A visionary with a passion for filmmaking. With his keen eye for cinematography, lighting, and angles, Thejas ensures that every frame he captures is not just a shot, but a memory to be cherished.",
-      image: "/Thejas.jpg?height=400&width=400",
+      image: "/placeholder.svg?height=400&width=400",
     },
     {
       name: "Daksha Pratheesh",
