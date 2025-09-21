@@ -12,37 +12,33 @@ const ArchivesSection = () => {
       icon: Award,
       image: "/smile.jpg?height=300&width=400",
       stats: "",
-      link: "https://drive.google.com/drive/mobile/folders/13E62BnK0KSN0KAMmu_nP8uw_SJE2nbQV?usp=share_link"
     },
     {
-      year: "2021",
+      year: "2023",
       title: "Digital Learning Initiative",
       description:
         "Successfully implemented cutting-edge digital learning platforms across all grade levels, enhancing educational outcomes.",
       icon: BookOpen,
       image: "/placeholder.svg?height=300&width=400",
-      stats: "100% Digital",
-      link: "#"
+      stats: "",
     },
     {
-      year: "2023",
+      year: "2022",
       title: "Community Outreach Program",
       description:
         "Launched comprehensive community service program engaging over 500 students in meaningful social impact projects.",
       icon: Users,
       image: "/placeholder.svg?height=300&width=400",
-      stats: "500+ Students",
-      link: "#"
+      stats: "",
     },
     {
-      year: "2022",
+      year: "2021",
       title: "Academic Excellence Recognition",
       description:
         "Received state recognition for outstanding academic programs and consistently high student achievement rates.",
       icon: TrendingUp,
       image: "/placeholder.svg?height=300&width=400",
-      stats: "State Award",
-      link: "#"
+      stats: "",
     },
   ]
 
@@ -55,9 +51,7 @@ const ArchivesSection = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16 fade-in"
         >
-          <h2 className="text-5xl font-bold mb-6 text-[#194272]">
-            Our Legacy of Excellence
-          </h2>
+          <h2 className="text-5xl font-bold mb-6 text-[#194272]">Our Legacy of Excellence</h2>
           <p className="text-xl text-white max-w-3xl mx-auto">
             Celebrating milestones, achievements, and the continuous journey of excellence that defines NewMUN.
           </p>
@@ -81,12 +75,8 @@ const ArchivesSection = () => {
                     <achievement.icon className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <div className="text-sm font-bold text-[#194272] uppercase tracking-wider">
-                      {achievement.year}
-                    </div>
-                    <div className="text-lg font-bold text-[#194272]">
-                      {achievement.stats}
-                    </div>
+                    <div className="text-sm font-bold text-[#194272] uppercase tracking-wider">{achievement.year}</div>
+                    <div className="text-lg font-bold text-[#194272]">{achievement.stats}</div>
                   </div>
                 </div>
 
@@ -94,21 +84,16 @@ const ArchivesSection = () => {
 
                 <p className="text-white leading-relaxed text-lg">{achievement.description}</p>
 
-                <a
-                  href={achievement.link}
-                  target={achievement.link !== "#" ? "_blank" : undefined}
-                  rel={achievement.link !== "#" ? "noopener noreferrer" : undefined}
-                  className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md"
-                >
-                  {achievement.link !== "#" ? "See More" : "Learn More"}
+                <button className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
+                  Learn More
                   <Calendar className="w-4 h-4 ml-2" />
-                </a>
+                </button>
               </div>
 
               {/* Image */}
               <div className={`${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
                 <div className="relative group">
-                  <div className="absolute inset-0 bg-[#194272] rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300 opacity-20"></div>
+                  <div className="absolute inset-0 bg-[#194272] rounded-3xl transform rotate-3 group-hover:rotate-6 transition-transform duration-300 opacity-10"></div>
                   <img
                     src={achievement.image || "/placeholder.svg"}
                     alt={achievement.title}

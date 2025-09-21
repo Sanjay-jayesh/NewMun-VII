@@ -1,16 +1,19 @@
-
 "use client"
 import { motion } from "motion/react"
 import { Instagram, Youtube, GraduationCap } from "lucide-react"
 
 const Footer = () => {
+  
+
+  
+
   const socialLinks = [
     { icon: Instagram, href: "https://www.instagram.com/newmun.bh/", color: "#fff" },
     { icon: Youtube, href: "https://www.youtube.com/@thenewindianschoolwllkingd3517", color: "#FFf" },
   ]
 
   return (
-    <footer className="bg-[#6d9eee] text-gray-100 py-16 border-t border-gray-300">
+    <footer className="bg-[#6d9eee] text-white py-16 border-t border-gray-100">
       <div className="container mx-auto px-6">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
@@ -27,7 +30,7 @@ const Footer = () => {
               </div>
               <h3 className="text-2xl font-bold text-[#194272]">NewMUN</h3>
             </div>
-            <p className="text-gray-100 leading-relaxed mb-6">
+            <p className="text-white leading-relaxed mb-6">
               Empowering the next generation of leaders through debate, diplomacy, and collaboration.
             </p>
           </motion.div>
@@ -62,16 +65,13 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="border-t border-gray-300 pt-8 fade-in"
+          className="border-t border-gray-200 pt-8 fade-in"
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
-            {/* Left: Copyright */}
-            <div className="text-gray-100 text-sm md:text-base mb-4 md:mb-0">
+            <div className="text-white text-base md:text-lg font-medium">
               <p>&copy; 2025 NewMUN. All rights reserved.</p>
             </div>
-
-            {/* Right: Created by */}
-            <div className="text-gray-100 text-base md:text-lg font-medium">
+            <div className="text-white text-base md:text-lg font-medium">
               <p>Created by Sanjay Jayesh</p>
             </div>
           </div>

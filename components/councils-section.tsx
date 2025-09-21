@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "motion/react"
-import { ArrowRight, Crown, Star } from "lucide-react"
+import { Users, Target, Lightbulb, Heart, ArrowRight, Crown, Star } from "lucide-react"
 import { useState } from "react"
 
 const CouncilsSection = () => {
@@ -128,15 +128,13 @@ const CouncilsSection = () => {
   return (
     <section id="councils" className="py-20 bg-[#6d9eee]">
       <div className="container mx-auto px-6">
-        {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16 fade-in"
         >
-          <h2 className="text-5xl font-bold mb-6 text-[#194272]">Our Councils</h2>
+          <h2 className="text-7xl font-bold mb-6 text-[#194272]">Councils</h2>
           <p className="text-xl text-white max-w-3xl mx-auto">
             Empowering students to lead, innovate, and make a positive impact through structured leadership opportunities at every level.
           </p>
@@ -146,7 +144,6 @@ const CouncilsSection = () => {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.6 }}
           className="flex justify-center mb-12 fade-in"
         >
@@ -179,7 +176,6 @@ const CouncilsSection = () => {
               key={`${activeTab}-${council.name}`}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="fade-in macbook-scroll group"
             >
@@ -192,6 +188,15 @@ const CouncilsSection = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-[#194272]/10 group-hover:bg-[#194272]/5 transition-colors duration-300" />
+
+                  {/* Icon Overlay */}
+                  {/* <div className="absolute top-6 left-6">
+                    <div className="w-16 h-16 bg-[#194272]/90 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                      <council.icon className="w-8 h-8 text-white" />
+                    </div>
+                  </div> */}
+
+                  {/* Level Badge */}
                   <div className="absolute top-6 right-6">
                     <div
                       className={`px-3 py-1 rounded-full text-sm font-semibold ${
@@ -212,10 +217,27 @@ const CouncilsSection = () => {
 
                   <p className="text-gray-600 leading-relaxed mb-4">{council.description}</p>
 
+                  {/* Requirements */}
                   <div className="mb-6">
                     <div className="text-sm font-semibold text-gray-500 mb-1">Requirements:</div>
                     <div className="text-sm text-gray-700">{council.requirements}</div>
                   </div>
+
+                  {/* Stats */}
+                  {/* <div className="flex items-center justify-between mb-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-[#194272]">{council.members}</div>
+                      <div className="text-sm text-gray-500">Members</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-[#194272]">{council.projects}</div>
+                      <div className="text-sm text-gray-500">Projects</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-[#194272]">100%</div>
+                      <div className="text-sm text-gray-500">Engagement</div>
+                    </div>
+                  </div> */}
 
                   <button className="w-full py-3 bg-[#194272] text-white font-semibold rounded-full hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
                     Apply Now
@@ -225,6 +247,31 @@ const CouncilsSection = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Overall Stats */}
+        {/* <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-16 text-center fade-in"
+        >
+          <div className="bg-[#194272] rounded-3xl p-12 text-white">
+            <h3 className="text-3xl font-bold mb-8">Council Impact Across All Levels</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              {[
+                { number: "150+", label: "Total Active Members" },
+                { number: "64", label: "Projects Completed" },
+                { number: "15", label: "Community Partners" },
+                { number: "100%", label: "Student Satisfaction" },
+              ].map((stat, index) => (
+                <div key={stat.label} className="space-y-2">
+                  <div className="text-4xl font-bold text-white">{stat.number}</div>
+                  <div className="text-blue-100 font-medium">{stat.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </motion.div> */}
       </div>
     </section>
   )
