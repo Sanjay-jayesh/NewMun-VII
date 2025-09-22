@@ -6,12 +6,13 @@ const ArchivesSection = () => {
   const achievements = [
     {
       year: "2024",
-      title: "Smile Foundations",
+      title: "Smile Foundation",
       description:
         "In a collective effort to support a noble cause, our students contributed a proportion of funds, which were pooled together and donated to The Smile Foundation. This initiative reflects the values of compassion and social responsibility that our school community upholds.",
       icon: Award,
       image: "/smile.jpg?height=300&width=400",
       stats: "",
+      link: "https://drive.google.com/drive/folders/13E62BnK0KSN0KAMmu_nP8uw_SJE2nbQV?fbclid=PAZXh0bgNhZW0CMTEAAaf6zcQK1wgrn8nNrxlGXCWb6hMdN04XJuQSZSisiDPKN9n0-9b9mgmZTTyb-A_aem_3K1LFMVE5Il7dUkxvBt9NA",
     },
     {
       year: "2023",
@@ -84,10 +85,22 @@ const ArchivesSection = () => {
 
                 <p className="text-white leading-relaxed text-lg">{achievement.description}</p>
 
-                <button className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
-                  Learn More
-                  <Calendar className="w-4 h-4 ml-2" />
-                </button>
+                {achievement.link ? (
+                  <a
+                    href={achievement.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md"
+                  >
+                    2024 pics
+                    <Calendar className="w-4 h-4 ml-2" />
+                  </a>
+                ) : (
+                  <button className="inline-flex items-center px-6 py-3 bg-[#194272] text-white rounded-full font-semibold hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
+                    See More 
+                    <Calendar className="w-4 h-4 ml-2" />
+                  </button>
+                )}
               </div>
 
               {/* Image */}

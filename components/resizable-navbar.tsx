@@ -94,7 +94,7 @@ const ResizableNavbar = () => {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="md:hidden text-black p-2" onClick={() => setIsOpen(!isOpen)}>
+          <button className="md:hidden text-white p-2" onClick={() => setIsOpen(!isOpen)}>
             <AnimatePresence mode="wait">
               {isOpen ? (
                 <motion.div
@@ -129,7 +129,7 @@ const ResizableNavbar = () => {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden bg-white border-t border-gray-200"
+              className="md:hidden overflow-hidden bg-[#6d9eee] border-t border-gray-200"
             >
               <div className="py-4 space-y-2">
                 {navItems.map((item, index) => (
@@ -139,7 +139,7 @@ const ResizableNavbar = () => {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="block w-full text-left py-3 px-4 text-gray-700 hover:text-black hover:bg-gray-50 transition-all duration-300 rounded-lg font-medium"
+                    className="block w-full text-left py-3 px-4 text-white hover:text-white hover:bg-[#194272] transition-all duration-300 rounded-lg font-medium"
                   >
                     {item.name}
                   </motion.button>

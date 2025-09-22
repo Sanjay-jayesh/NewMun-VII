@@ -20,6 +20,9 @@ export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
+    // ✅ Always reset scroll to top on refresh
+    window.scrollTo(0, 0)
+
     // Add smooth scrolling to the document
     document.documentElement.style.scrollBehavior = "smooth"
 
@@ -28,11 +31,7 @@ export default function Home() {
       gsap.utils.toArray(".fade-in").forEach((element: any) => {
         gsap.fromTo(
           element,
-          {
-            opacity: 0,
-            y: 80,
-            scale: 0.95,
-          },
+          { opacity: 0, y: 80, scale: 0.95 },
           {
             opacity: 1,
             y: 0,
@@ -67,11 +66,7 @@ export default function Home() {
       gsap.utils.toArray(".macbook-scroll").forEach((element: any) => {
         gsap.fromTo(
           element,
-          {
-            scale: 0.85,
-            opacity: 0,
-            rotateX: 15,
-          },
+          { scale: 0.85, opacity: 0, rotateX: 15 },
           {
             scale: 1,
             opacity: 1,
@@ -92,11 +87,7 @@ export default function Home() {
       gsap.utils.toArray(".stagger-item").forEach((element: any, index) => {
         gsap.fromTo(
           element,
-          {
-            opacity: 0,
-            y: 60,
-            scale: 0.9,
-          },
+          { opacity: 0, y: 60, scale: 0.9 },
           {
             opacity: 1,
             y: 0,

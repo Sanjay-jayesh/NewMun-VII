@@ -1,6 +1,7 @@
 "use client"
+
 import { motion } from "motion/react"
-import { Users, Target, Lightbulb, Heart, ArrowRight, Crown, Star } from "lucide-react"
+import { ArrowRight, Crown, Star } from "lucide-react"
 import { useState } from "react"
 
 const CouncilsSection = () => {
@@ -16,7 +17,29 @@ const CouncilsSection = () => {
         </>
       ),
       image: "/UNSC.png?height=300&width=400",
-      requirements: "Grades 9-12",
+      requirements: "Grades 8-12",
+    },
+    {
+      name: "European Union",
+      description: (
+        <>
+          ● Modernising the GDPR: Safeguarding Data Privacy in the Age of AI and Emerging Technologies <br />
+          ● Promoting Green Technology and Sustainable Innovation in the European Union
+        </>
+      ),
+      image: "/EU.png?height=300&width=400",
+      requirements: "Grades 8-12",
+    },
+    {
+      name: "United Nations Office for Outer Space Affairs",
+      description: (
+        <>
+          ● Ethical Concerns of Human Settlement on Other Planets <br />
+          ● Ethical Concerns on Space Law and Governance
+        </>
+      ),
+      image: "/UNOOSA.png?height=300&width=400",
+      requirements: "Grades 8-12",
     },
     {
       name: "United Nations Development Program",
@@ -27,40 +50,7 @@ const CouncilsSection = () => {
         </>
       ),
       image: "/UNDP.png?height=300&width=400",
-      requirements: "Grades 9-12",
-    },
-    {
-      name: "European Union",
-      description: (
-        <>
-          ● Modernising the GDPR: Safeguarding Data Privacy in the Age of AI and Emerging Technologies <br />
-          ● Promoting Green Technology and Sustainable Innovation in the European Union
-        </>
-      ),
-      image: "/EU.jpg?height=300&width=400",
-      requirements: "Grades 9-12",
-    },
-    {
-      name: "Lok Sabha",
-      description: (
-        <>
-          ● Discussion on the Framework for Promotion and Regulation of Online Gaming in India <br />
-          ● Deliberation on Implementing the National Education Policy to Enhance Quality and Accessibility of Education
-        </>
-      ),
-      image: "/Lok_Sabha.svg?height=300&width=400",
-      requirements: "Grades 9-12",
-    },
-    {
-      name: "United Nations Office for Outer Space Affairs",
-      description: (
-        <>
-          ● Ethical Concerns of Human Settlement on Other Planets <br />
-          ● Ethical Concerns on Space Law and Governance
-        </>
-      ),
-      image: "/UNOOSA.jpg?height=300&width=400",
-      requirements: "Grades 9-12",
+      requirements: "Grades 8-12",
     },
     {
       name: "International Monetary Fund",
@@ -71,7 +61,29 @@ const CouncilsSection = () => {
         </>
       ),
       image: "/IMF.png?height=300&width=400",
-      requirements: "Grades 9-12",
+      requirements: "Grades 8-12",
+    },
+    {
+      name: "Lok Sabha",
+      description: (
+        <>
+          ● Discussion on the Framework for Promotion and Regulation of Online Gaming in India <br />
+          ● Deliberation on Implementing the National Education Policy to Enhance Quality and Accessibility of Education
+        </>
+      ),
+      image: "/Lok_Sabha.png?height=300&width=400",
+      requirements: "Grades 8-12",
+    },
+    {
+      name: "Fictional Crisis Committee",
+      description: (
+        <>
+          ● The COVID-19 Economic Crisis (2020–2021) <br />
+          ● Crime in the world of Cryptocurrency
+        </>
+      ),
+      image: "/IMF.png?height=300&width=400",
+      requirements: "Grades 8-12",
     },
     {
       name: "Fédération Internationale de l'Automobile",
@@ -82,10 +94,9 @@ const CouncilsSection = () => {
         </>
       ),
       image: "/FIA.png?height=300&width=400",
-      requirements: "Grades 9-12",
+      requirements: "Grades 8-12",
     },
   ]
-
 
   const juniorCouncils = [
     {
@@ -97,7 +108,7 @@ const CouncilsSection = () => {
         </>
       ),
       image: "/UNESCO.png?height=300&width=400",
-      requirements: "Grades 6-8",
+      requirements: "Grades 5-7",
     },
     {
       name: "United Nations Environment Programme",
@@ -107,8 +118,8 @@ const CouncilsSection = () => {
           ● Sustainable Ocean Management
         </>
       ),
-      image: "/UNEP.jpg?height=300&width=400",
-      requirements: "Grades 6-8",
+      image: "/UNEP.png?height=300&width=400",
+      requirements: "Grades 5-7",
     },
     {
       name: "World Health Organization",
@@ -119,7 +130,7 @@ const CouncilsSection = () => {
         </>
       ),
       image: "/WHO.png?height=300&width=400",
-      requirements: "Grades 6-8",
+      requirements: "Grades 5-7",
     },
   ]
 
@@ -128,6 +139,7 @@ const CouncilsSection = () => {
   return (
     <section id="councils" className="py-20 bg-[#6d9eee]">
       <div className="container mx-auto px-6">
+        {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -179,8 +191,8 @@ const CouncilsSection = () => {
               transition={{ duration: 0.8, delay: index * 0.1 }}
               className="fade-in macbook-scroll group"
             >
-              <div className="bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100">
-                {/* Image Section */}
+              <div className="bg-white rounded-3xl overflow-hidden hover:shadow-2xl transition-all duration-500 border border-gray-100 flex flex-col h-full">
+                {/* Image */}
                 <div className="relative overflow-hidden h-64">
                   <img
                     src={council.image || "/placeholder.svg"}
@@ -188,13 +200,6 @@ const CouncilsSection = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-[#194272]/10 group-hover:bg-[#194272]/5 transition-colors duration-300" />
-
-                  {/* Icon Overlay */}
-                  {/* <div className="absolute top-6 left-6">
-                    <div className="w-16 h-16 bg-[#194272]/90 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                      <council.icon className="w-8 h-8 text-white" />
-                    </div>
-                  </div> */}
 
                   {/* Level Badge */}
                   <div className="absolute top-6 right-6">
@@ -208,8 +213,8 @@ const CouncilsSection = () => {
                   </div>
                 </div>
 
-                {/* Content Section */}
-                <div className="p-8">
+                {/* Content */}
+                <div className="p-8 flex flex-col flex-1">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="text-2xl font-bold text-[#194272]">{council.name}</h3>
                     <ArrowRight className="w-6 h-6 text-[#194272] group-hover:translate-x-1 transition-all duration-300" />
@@ -223,23 +228,7 @@ const CouncilsSection = () => {
                     <div className="text-sm text-gray-700">{council.requirements}</div>
                   </div>
 
-                  {/* Stats */}
-                  {/* <div className="flex items-center justify-between mb-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-[#194272]">{council.members}</div>
-                      <div className="text-sm text-gray-500">Members</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-[#194272]">{council.projects}</div>
-                      <div className="text-sm text-gray-500">Projects</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-[#194272]">100%</div>
-                      <div className="text-sm text-gray-500">Engagement</div>
-                    </div>
-                  </div> */}
-
-                  <button className="w-full py-3 bg-[#194272] text-white font-semibold rounded-full hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
+                  <button className="mt-auto w-full py-3 bg-[#194272] text-white font-semibold rounded-full hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
                     Apply Now
                   </button>
                 </div>
@@ -247,31 +236,6 @@ const CouncilsSection = () => {
             </motion.div>
           ))}
         </div>
-
-        {/* Overall Stats */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-16 text-center fade-in"
-        >
-          <div className="bg-[#194272] rounded-3xl p-12 text-white">
-            <h3 className="text-3xl font-bold mb-8">Council Impact Across All Levels</h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              {[
-                { number: "150+", label: "Total Active Members" },
-                { number: "64", label: "Projects Completed" },
-                { number: "15", label: "Community Partners" },
-                { number: "100%", label: "Student Satisfaction" },
-              ].map((stat, index) => (
-                <div key={stat.label} className="space-y-2">
-                  <div className="text-4xl font-bold text-white">{stat.number}</div>
-                  <div className="text-blue-100 font-medium">{stat.label}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.div> */}
       </div>
     </section>
   )
