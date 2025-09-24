@@ -1,12 +1,13 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "motion/react"
-import { Menu, X, GraduationCap } from "lucide-react"
+import { Menu, X } from "lucide-react"
 
 const ResizableNavbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [isCompact, setIsCompact] = useState(false)
+  const menuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,28 +19,43 @@ const ResizableNavbar = () => {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  // Close sidebar when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside)
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+    return () => document.removeEventListener("mousedown", handleClickOutside)
+  }, [isOpen])
+
   const navItems = [
     { name: "Home", href: "#home" },
     { name: "Archives", href: "#archives" },
     { name: "Principal", href: "#principal"},
     { name: "Team", href: "#team" },
     { name: "Councils", href: "#councils" },
+    { name: "Resources", href: "#resources"},
     { name: "Testimonials", href: "#testimonials" },
   ]
 
+  // FIXED handleNavClick
   const handleNavClick = (href: string) => {
-    const element = document.querySelector(href)
-    if (element) {
-      const navbarHeight = isCompact ? 60 : scrolled ? 70 : 80
-      const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
-      const offsetPosition = elementPosition - navbarHeight - 20 // Extra 20px padding
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      })
-    }
-    setIsOpen(false)
+    setIsOpen(false) // close menu first
+    setTimeout(() => { // wait for menu close animation
+      const element = document.querySelector(href) as HTMLElement | null
+      if (element) {
+        const navbarHeight = isCompact ? 60 : scrolled ? 70 : 80
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset
+        const offsetPosition = elementPosition - navbarHeight - 20
+        window.scrollTo({ top: offsetPosition, behavior: "smooth" })
+      }
+    }, 150)
   }
 
   return (
@@ -56,40 +72,23 @@ const ResizableNavbar = () => {
     >
       <div className="container mx-auto px-6 pt-3">
         <div className="flex items-center justify-between h-full">
-          <motion.div
-            animate={{
-              scale: isCompact ? 0.9 : 1,
-            }}
-            className="flex items-center space-x-3 cursor-pointer"
-            onClick={() => handleNavClick("#home")}
-          >
-            <div className="flex items-center justify-center">
-              <img src="/logo.png" alt="NewMUN" className="w-10 h-8 " />
-            </div>
-            <motion.div
-              animate={{
-                fontSize: isCompact ? "1.25rem" : "1.5rem",
-              }}
-              className="font-semibold text-white"
-            >
-              NewMUN
-            </motion.div>
-          </motion.div>
+          {/* Logo & Brand */}
+          <div className="flex items-center space-x-3 cursor-pointer" onClick={() => handleNavClick("#home")}>
+            <img src="/logo.png" alt="NewMUN" className="w-10 h-8" />
+            <div className="font-semibold text-white text-xl">NewMUN</div>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navItems.map((item, index) => (
-              <motion.button
+            {navItems.map((item) => (
+              <button
                 key={item.name}
                 onClick={() => handleNavClick(item.href)}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
-                className="text-white hover:text-[#194272] transition-colors duration-300 relative group font-medium cursor-pointer"
+                className="text-white hover:text-[#194272] transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#194272] group-hover:w-full transition-all duration-300"></span>
-              </motion.button>
+              </button>
             ))}
           </nav>
 
@@ -125,6 +124,7 @@ const ResizableNavbar = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.nav
+              ref={menuRef}
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
@@ -132,22 +132,20 @@ const ResizableNavbar = () => {
               className="md:hidden overflow-hidden bg-[#6d9eee] border-t border-gray-200"
             >
               <div className="py-4 space-y-2">
-                {navItems.map((item, index) => (
-                  <motion.button
+                {navItems.map((item) => (
+                  <button
                     key={item.name}
                     onClick={() => handleNavClick(item.href)}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
                     className="block w-full text-left py-3 px-4 text-white hover:text-white hover:bg-[#194272] transition-all duration-300 rounded-lg font-medium"
                   >
                     {item.name}
-                  </motion.button>
+                  </button>
                 ))}
               </div>
             </motion.nav>
           )}
         </AnimatePresence>
+
       </div>
     </motion.header>
   )

@@ -7,6 +7,7 @@ import ResizableNavbar from "@/components/resizable-navbar"
 import Footer from "@/components/footer"
 import TracingBeam from "@/components/ui/tracing-beam"
 import PrincipalDesk from "@/components/PrincipalDesk"
+import Resources from "@/components/Resources"
 
 const HeroSection = dynamic(() => import("@/components/hero-section"), { ssr: false })
 const ArchivesSection = dynamic(() => import("@/components/archives-section"), { ssr: false })
@@ -127,6 +128,7 @@ export default function Home() {
             <PrincipalDesk />
             <TeamSection />
             <CouncilsSection />
+            <Resources />
             <TestimonialSection />
             <Footer />
           </div>

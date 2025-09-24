@@ -168,7 +168,7 @@ const TeamSection = () => {
               key={member.name}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.01}}
+              transition={{ duration: 0.8, delay: index * 0.07}}
               className="fade-in macbook-scroll group"
             >
               <div className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:scale-105 border border-gray-100">

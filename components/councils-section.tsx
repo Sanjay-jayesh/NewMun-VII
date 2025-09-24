@@ -4,10 +4,18 @@ import { motion } from "motion/react"
 import { ArrowRight, Crown, Star } from "lucide-react"
 import { useState } from "react"
 
+type Council = {
+  name: string
+  description: JSX.Element
+  image: string
+  requirements: string
+  pdf?: string 
+}
+
 const CouncilsSection = () => {
   const [activeTab, setActiveTab] = useState<"senior" | "junior">("senior")
 
-  const seniorCouncils = [
+  const seniorCouncils: Council[] = [
     {
       name: "United Nations Security Council",
       description: (
@@ -18,6 +26,7 @@ const CouncilsSection = () => {
       ),
       image: "/UNSC.png?height=300&width=400",
       requirements: "Grades 8-12",
+      pdf: "/UNSC_guide.pdf"
     },
     {
       name: "European Union",
@@ -73,6 +82,7 @@ const CouncilsSection = () => {
       ),
       image: "/Lok_Sabha.png?height=300&width=400",
       requirements: "Grades 8-12",
+      pdf: "/LOK_SABHA_guide.pdf"
     },
     {
       name: "Fictional Crisis Committee",
@@ -95,10 +105,11 @@ const CouncilsSection = () => {
       ),
       image: "/FIA.png?height=300&width=400",
       requirements: "Grades 8-12",
+      pdf: "/FIA_guide.pdf", // 👈 only FIA has a guide for now
     },
   ]
 
-  const juniorCouncils = [
+  const juniorCouncils: Council[] = [
     {
       name: "United National Educational, Scientific Cultural Organisation",
       description: (
@@ -228,9 +239,23 @@ const CouncilsSection = () => {
                     <div className="text-sm text-gray-700">{council.requirements}</div>
                   </div>
 
-                  <button className="mt-auto w-full py-3 bg-[#194272] text-white font-semibold rounded-full hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md">
-                    Apply Now
-                  </button>
+                  {council.pdf ? (
+                    <a
+                      href={council.pdf}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-auto w-full py-3 bg-[#194272] text-white font-semibold rounded-full hover:bg-[#15325a] transition-all duration-300 transform hover:scale-105 shadow-md text-center"
+                    >
+                      View Background Guide
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="mt-auto w-full py-3 bg-gray-400 text-white font-semibold rounded-full cursor-not-allowed"
+                    >
+                      View Background Guides
+                    </button>
+                  )}
                 </div>
               </div>
             </motion.div>

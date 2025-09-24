@@ -30,7 +30,7 @@ const Footer = () => {
               </div>
               <h3 className="text-2xl font-bold text-[#194272]">NewMUN</h3>
             </div>
-            <p className="text-white leading-relaxed mb-6">
+            <p className="text-white md:text-xl leading-relaxed mb-6">
               Empowering the next generation of leaders through debate, diplomacy, and collaboration.
             </p>
           </motion.div>
@@ -65,13 +65,13 @@ const Footer = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="border-t border-gray-200 pt-8 fade-in"
+          className="border-t border-gray-200 pt-8 pb-6 fade-in" // added pb-6
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-white text-base md:text-lg font-medium">
+            <div className="text-white text-base md:text- font-medium">
               <p>&copy; 2025 NewMUN. All rights reserved.</p>
             </div>
-            <div className="text-white text-base md:text-lg font-medium">
+            <div className="text-white text-base md:text-xl font-medium">
               <p>Created by Sanjay Jayesh</p>
             </div>
           </div>

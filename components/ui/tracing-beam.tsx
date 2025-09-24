@@ -41,7 +41,7 @@ const TracingBeam: React.FC<TracingBeamProps> = ({ children }) => {
 
         {/* Animated dot */}
         <motion.div
-          className="absolute w-4 h-4 bg-black rounded-full -left-2 shadow-lg"
+          className="absolute w-4 h-4 bg-white rounded-full -left-2 shadow-lg"
           style={{
             top: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]),
           }}

@@ -5,10 +5,10 @@ import { Star, Quote, GraduationCap, Heart } from "lucide-react"
 const TestimonialSection = () => {
   const testimonials = [
     {
-      name: "Alex Thompson",
-      role: "Class of 2023, Harvard University",
+      name: "Faiha Mariyam Shameer",
+      role: "Class of 2022",
       content:
-        "Excellence Academy didn't just prepare me for college; it prepared me for life. The innovative teaching methods and supportive environment helped me discover my passion for computer science.",
+        "Imagine a mere classroom with a few discerning minds driving world transformation. What began as a scary event of trial and error in my life turned out to be the best moments I’ve ever experienced, NewMUN is where I found out about the unfathomable nature of world suffering and its craving for eternal peace. Through the most robust of debates, for the first time, it instilled in me the exhilarating belief that I required no ordnance higher than my voice to shape change.",
       rating: 5,
       image: "/placeholder.svg?height=100&width=100",
       category: "Alumni",
