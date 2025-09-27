@@ -38,9 +38,9 @@ const ResizableNavbar = () => {
     { name: "Home", href: "#home" },
     { name: "Archives", href: "#archives" },
     { name: "Principal", href: "#principal"},
-    { name: "Team", href: "#team" },
-    { name: "Councils", href: "#councils" },
     { name: "Resources", href: "#resources"},
+    { name: "Councils", href: "#councils" },
+    { name: "Team", href: "#team" },
     { name: "Testimonials", href: "#testimonials" },
   ]
 

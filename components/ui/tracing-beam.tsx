@@ -17,7 +17,7 @@ const TracingBeam: React.FC<TracingBeamProps> = ({ children }) => {
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1])
 
   return (
-    <div ref={ref} className="relative">
+    <div ref={ref} className="relative overflow-y-hidden"> {/* <-- added overflow-y-hidden */}
       {/* Tracing Beam */}
       <div className="fixed left-8 top-0 bottom-0 w-px z-40 hidden lg:block">
         <svg className="absolute top-0 left-0 w-full h-full" viewBox="0 0 1 100" preserveAspectRatio="none">
@@ -32,9 +32,7 @@ const TracingBeam: React.FC<TracingBeamProps> = ({ children }) => {
             stroke="#000000"
             strokeWidth="3"
             vectorEffect="non-scaling-stroke"
-            style={{
-              pathLength,
-            }}
+            style={{ pathLength }}
             strokeDasharray="0 1"
           />
         </svg>
@@ -42,9 +40,7 @@ const TracingBeam: React.FC<TracingBeamProps> = ({ children }) => {
         {/* Animated dot */}
         <motion.div
           className="absolute w-4 h-4 bg-white rounded-full -left-2 shadow-lg"
-          style={{
-            top: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]),
-          }}
+          style={{ top: useTransform(scrollYProgress, [0, 1], ["0%", "100%"]) }}
         />
       </div>
 

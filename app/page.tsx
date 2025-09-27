@@ -116,7 +116,7 @@ export default function Home() {
   return (
     <div
       ref={mainRef}
-      className="min-h-screen bg-[#6d9eee] text-black overflow-x-hidden"
+      className="min-h-screen bg-[#6d9eee] text-black overflow-x-hidden overflow-y-hidden" 
       style={{ scrollPaddingTop: "80px" }}
     >
       <ResizableNavbar />
@@ -126,9 +126,9 @@ export default function Home() {
           <div className="lg:ml-16">
             <ArchivesSection />
             <PrincipalDesk />
-            <TeamSection />
-            <CouncilsSection />
             <Resources />
+            <CouncilsSection />
+            <TeamSection />
             <TestimonialSection />
             <Footer />
           </div>
