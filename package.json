@@ -6,10 +6,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "pnpm build && pnpm export && pnpm gh-pages -d out"
+    "deploy": "pnpm build && pnpm gh-pages -d out"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
