@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
-  assetPrefix: '/NewMun-VII',
-  basePath: '/NewMun-VII',
+  output: "export", 
   images: {
     unoptimized: true,
   },
@@ -13,4 +11,5 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
 }
+
 export default nextConfig

@@ -414,9 +414,6 @@ const TeamSection: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Group picture area */}
-        {/* <motion.div initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="mb-8 flex flex-col items-center" > <div className="overflow-hidden relative w-full max-w-5xl shadow-lg rounded-3xl"> <img src="/smile.jpg" alt="Our Team" className="w-full h-auto object-cover rounded-3xl" /> </div> <p className="mt-4 text-xl md:text-2xl font-semibold text-[#194272] text-center"> Team NewMun VII 2025 </p> </motion.div> */}
-
         <TeamSelector activeTeam={activeTeam} setActiveTeam={setActiveTeam} />
 
         {/* OC Team Layout */}
