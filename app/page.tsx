@@ -21,9 +21,8 @@ export default function Home() {
   const mainRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // ✅ Always reset scroll to top on refresh
+    // Always reset scroll to top on refresh
     window.scrollTo(0, 0)
-
     // Add smooth scrolling to the document
     document.documentElement.style.scrollBehavior = "smooth"
 
@@ -116,24 +115,24 @@ export default function Home() {
   return (
     <div
       ref={mainRef}
-      className="min-h-screen bg-[#6d9eee] text-black overflow-x-hidden overflow-y-hidden" 
+      className="min-h-screen bg-gradient-to-b from-blue-50 to-blue-100 text-black overflow-x-hidden"
       style={{ scrollPaddingTop: "80px" }}
     >
       <ResizableNavbar />
       <TracingBeam>
-        <div className="relative">
+        <div className="relative max-w-7xl mx-auto">
           <HeroSection />
           <div className="lg:ml-16">
-            <ArchivesSection />
             <PrincipalDesk />
-            {/* <Resources /> */}
-            <CouncilsSection />
+            <Resources />
+            <ArchivesSection />
             <TeamSection />
+            <CouncilsSection />
             <TestimonialSection />
-            <Footer />
           </div>
         </div>
       </TracingBeam>
+      <Footer />
     </div>
   )
 }
