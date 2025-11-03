@@ -1,8 +1,8 @@
 {
-  "name": "my-v0-project",
+  "name": "newmun",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://sanjay-jayesh.github.io/NewMun-VII/",
+  "homepage": "https://newmunbh.com/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
