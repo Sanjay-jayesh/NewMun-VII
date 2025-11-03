@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import FlipWords from "@/components/ui/flip-words"
+import Image from "next/image"
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -12,7 +13,6 @@ const HeroSection = () => {
   const logoRef = useRef<HTMLDivElement>(null)
   const words = ["Excellence", "Innovation", "Leadership", "Success", "Future"]
 
-  // Countdown state
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
   useEffect(() => {
@@ -81,7 +81,6 @@ const HeroSection = () => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-center w-full gap-12 z-10">
         {/* Text Section */}
         <div className="text-center lg:text-left lg:w-1/2 flex flex-col">
-          {/* Welcome + NewMUN */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -95,12 +94,11 @@ const HeroSection = () => {
             </h1>
           </motion.div>
 
-          {/* Flipping Words */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-xl text-white mb-20" // <-- mb-16 pushes countdown further down
+            className="text-xl text-white mb-20"
           >
             Building <FlipWords words={words} className="font-semibold text-[#194272]" /> for Tomorrow
           </motion.div>
@@ -137,11 +135,13 @@ const HeroSection = () => {
           transition={{ duration: 1, delay: 0.2, ease: "easeOut" }}
           className="lg:w-1/2 flex justify-center mt-10 lg:mt-0"
         >
-          <img
+          <Image
             src="/New logo.png"
             alt="NewMUN"
+            width={550}
+            height={550}
+            priority={true} // <-- Preloads instantly
             className="w-[550px] max-w-full"
-            loading="eager" // <-- forces instant loading
           />
         </motion.div>
       </div>
