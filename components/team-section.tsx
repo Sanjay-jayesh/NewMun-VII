@@ -275,7 +275,7 @@ const facultyMembers: Person[] = [
     name: "Shanipriya Rajesh",
     position: "",
     bio: "",
-    image: "/faculty/Shani.jpg",
+    image: "/faculty/Shani.JPG",
   },
   {
     name: "Mohammed Shafi",
@@ -287,7 +287,7 @@ const facultyMembers: Person[] = [
     name: "Likson Lazar",
     position: "",
     bio: "",
-    image: "/faculty/Likson.jpg",
+    image: "/faculty/Likson.JPG",
   },
   {
     name: "Sreeja Nair",
