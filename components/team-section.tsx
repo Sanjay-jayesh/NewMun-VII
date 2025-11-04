@@ -28,7 +28,7 @@ const ocGroups: Group[] = [
     left: {
       name: "Ms.Soumi Mondal",
       position: "MUN Director",
-      bio: " ",
+      bio: "Without a doubt, she is the Soul of NewMUN since its very inception. A star in a world of endless possibilities. Her character echoes the acheivements of the past, the glory of the present and the opportunities of the future. Her constant efforts have always been fruitful in navigating and capitalizing in a 21st century world won by those who push the boundaries of the impossible. In short, the essence of NewMUN, poised and risen to the heights of a sky that never found its end. She is, the one and only; Soumi Mondal.",
       image: "/Soumi.jpg?height=600&width=600",
     },
     right: {
@@ -224,37 +224,37 @@ const ocGroups: Group[] = [
 // Faculty Data 
 const facultyMembers: Person[] = [
   {
-    name: "Kala Balachandran",
+    name: "Mrs. Kala Balachandran",
     position: "",
     bio: "",
     image: "/faculty/Kala.jpg",
   },
   {
-    name: "Ancy P. Joseph",
+    name: "Mrs. Ancy P. Joseph",
     position: "",
     bio: "The faculty section uses the old card design (grid of individual members) you provided, awaiting your actual faculty data.",
     image: "/faculty/Ancy.jpg",
   },
   {
-    name: "Roshni Radhakrishnan",
+    name: "Mrs. Roshni Radhakrishnan",
     position: "",
     bio: "",
     image: "/faculty/Roshni.jpg",
   },
   {
-    name: "Saritha Sethumadhavan",
+    name: "Mrs. Saritha Sethumadhavan",
     position: "",
     bio: "",
     image: "/faculty/Saritha.jpg",
   },
   {
-    name: "Sindhuja C B",
+    name: "Mrs. Sindhuja C B",
     position: "",
     bio: "",
     image: "/faculty/Sindhuja.jpg",
   },
   {
-    name: "Sarija Shijoy",
+    name: "Mrs. Sarija Shijoy",
     position: "",
     bio: "",
     image: "/faculty/Sarija.jpg",
@@ -266,43 +266,43 @@ const facultyMembers: Person[] = [
     image: "/faculty/Vijitha.jpg",
   },
   {
-    name: "Bindu Reghu",
+    name: "Mrs. Bindu Reghu",
     position: "",
     bio: "",
     image: "/faculty/Bindu.jpg",
   },
   {
-    name: "Shanipriya Rajesh",
+    name: "Mrs. Shanipriya Rajesh",
     position: "",
     bio: "",
     image: "/faculty/Shani.JPG",
   },
   {
-    name: "Mohammed Shafi",
+    name: "Mr. Mohammed Shafi",
     position: "",
     bio: "",
     image: "/faculty/Shafi.jpg",
   },
   {
-    name: "Likson Lazar",
+    name: "Mr. Likson Lazar",
     position: "",
     bio: "",
     image: "/faculty/Likson.JPG",
   },
   {
-    name: "Sreeja Nair",
+    name: "Mrs. Sreeja Nair",
     position: "",
     bio: "",
     image: "/faculty/Sreeja.jpg",
   },
   {
-    name: "Valen Pinto",
+    name: "Mrs. Valen Pinto",
     position: "",
     bio: "",
     image: "/faculty/Valen.jpg",
   },
   {
-    name: "Ruby Paul",
+    name: "Mrs. Ruby Paul",
     position: "",
     bio: "",
     image: "/faculty/Ruby.jpg",
