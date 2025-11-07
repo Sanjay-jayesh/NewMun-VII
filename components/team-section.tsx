@@ -44,13 +44,13 @@ const ocGroups: Group[] = [
     left: {
       name: "Nahreen Mariyam Shameer",
       position: "Secretary General",
-      bio: " ",
+      bio: "Nahreen’s MUN journey began with her first conference in 2022, where she represented Afghanistan in the WHO. Since then, she has grown into a passionate and dedicated MUNer - known for her wholehearted commitment and love for diplomacy, she has participated in multiple interschool MUNs along the way. Guided by the belief that great change is born from small beginnings, she now leads NewMUN as its Secretary-General — continuing to inspire others with her enthusiasm, empathy, and drive for meaningful dialogue.",
       image: "/Nahreen.jpg?height=600&width=600",
     },
     right: {
       name: "Ahan Shailendra Kamble",
       position: "Deputy Secretary General",
-      bio: " ",
+      bio: "Meet Ahan Shailendra Kamble, the Deputy Secretary-General who keeps the MUN world spinning! Whether it’s solving last-minute crises, hyping up delegates, or making sure every committee runs like clockwork, he brings energy and enthusiasm to everything. With a love for diplomacy (and maybe a little coffee), Ahan is here to make this MUN unforgettable!",
       image: "/Ahan.jpg?height=600&width=600",
     },
     groupImage: "/C7-OC/AhanXNahreen.jpg",
@@ -78,7 +78,7 @@ const ocGroups: Group[] = [
     left: {
       name: "Alfia Rejan Varghese",
       position: "Head of Finance & Logistics",
-      bio: " ",
+      bio: "Alfia Rejan Varghese, a student of class XII, is our Head of Finance this year. She’s the go-to person for all money-related things, making sure our budget stays on track so everything runs smoothly behind the scenes. Beyond her love for working with numbers Alfia’s super friendly, and works really well with everyone in the team. She is excited to help make this MUN an unforgettable experience for all participants.",
       image: "/Alfia.jpg?height=600&width=600",
     },
     right: {
@@ -193,10 +193,10 @@ const ocGroups: Group[] = [
       image: "/Daksha.jpg?height=600&width=600",
     },
     right: {
-      name: "Sreenavneeth",
+      name: "Sree Navaneeth",
       position: "Head of Photography",
       bio:
-        "",
+        "Sree Navaneeth Krishna, a student of Class XII, is our Head of Photography this year. With a keen eye for detail and a passion for capturing moments that tell a story, Sree ensures that every highlight of the MUN is framed to perfection. Whether it’s a candid shot that captures the buzz of a committee session or a grand moment on stage, his work speaks for itself. Known for his creativity and calm presence, Sree adds a touch of artistry to every event and is dedicated to making this MUN truly unforgettable through his lens.",
       image: "/Albi.jpg?height=600&width=600",
     },
     groupImage: "/C7-OC/DakshaXNav.jpg",
@@ -260,7 +260,7 @@ const facultyMembers: Person[] = [
     image: "/faculty/Sarija.jpg",
   },
   {
-    name: "Vijitha Suraj Nair",
+    name: "Mrs. Vijitha Suraj Nair",
     position: "",
     bio: "",
     image: "/faculty/Vijitha.jpg",
