@@ -34,7 +34,7 @@ const ocGroups: Group[] = [
     right: {
       name: "Fidel Marakar",
       position: "Student Director",
-      bio: " ",
+      bio: "Fidel Marakar is a passionate and dedicated MUN enthusiast recognized for his diplomacy, research, and leadership across several conferences. Having served as both delegate and chairperson, he brings valuable experience and a deep interest in global affairs.",
       image: "/Fidel.jpg?height=600&width=600",
     },
     groupImage: "/C7-OC/SoumiXFidel1.jpg",
