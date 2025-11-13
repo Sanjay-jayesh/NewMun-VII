@@ -11,11 +11,12 @@ type Resource = {
 
 const Resources = () => {
   const resources: Resource[] = [
-    { name: "Chair's Handbook", file: "/pdfs/Chair_Handbook.pdf", type: "pdf" },
-    { name: "Delegate's Handbook", file: "/pdfs/Chair_Handbook.pdf", type: "pdf" },
+    // { name: "Chair's Handbook", file: "/pdfs/Chair_Handbook.pdf", type: "pdf" },
+    // { name: "Delegate's Handbook", file: "/pdfs/Chair_Handbook.pdf", type: "pdf" },
     { name: "Senior Delegate Allocation", file: "/pdfs/SeniorDelegateAllocations.pdf", type: "pdf" },
     { name: "Junior Delegate Allocation", file: "/pdfs/JuniorDelegateAllocations.pdf", type: "pdf" },
-    { name: "Rules of Procedures", file: "/pdfs/RulesOfProcedure.pdf", type: "pdf" },
+    // { name: "Rules of Procedures", file: "/pdfs/RulesOfProcedure.pdf", type: "pdf" },
+    { name: "Itinerary", file: "/pdfs/Itinerary.pdf", type: "pdf" },
     { name: "Download NewMUN Logo", file: "NewMUN.png", type: "image" },
   ]
 

@@ -126,7 +126,7 @@ export default function Home() {
           <div className="lg:ml-16">
             <ArchivesSection />
             <PrincipalDesk />
-            {/* <Resources /> */}
+            <Resources />
             <CouncilsSection />
             <TeamSection />
             <TestimonialSection />
