@@ -38,6 +38,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/EU.png?height=300&width=400",
       requirements: "Grades 8-12",
+      pdf: "/pdfs/EU.pdf",
     },
     {
       name: "United Nations Office for Outer Space Affairs",
@@ -49,6 +50,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/UNOOSA.png?height=300&width=400",
       requirements: "Grades 8-12",
+      pdf: "/pdfs/UNOOSA.pdf",
     },
     {
       name: "United Nations Development Program",
@@ -60,6 +62,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/UNDP.png?height=300&width=400",
       requirements: "Grades 8-12",
+      pdf: "/pdfs/UNDP.pdf",
     },
     {
       name: "International Monetary Fund",
@@ -71,6 +74,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/IMF.png?height=300&width=400",
       requirements: "Grades 8-12",
+      pdf: "/pdfs/IMF.pdf",
     },
     {
       name: "Lok Sabha",
@@ -82,18 +86,21 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/Lok_Sabha.png?height=300&width=400",
       requirements: "Grades 8-12",
-      pdf: ""
+      pdf: "/pdfs/Lok Sabha.pdf",
     },
     {
       name: "Fictional Crisis Committee",
       description: (
         <>
-          {/* ●  <br />
-          ●  */}
+          ● Mission Impossible: The IMF Compromise – A rogue agent has
+unleashed the first wave of stolen IMF secrets, with more to come.
+Nations must respond.<br />
+          ● 
         </>
       ),
-      image: "/Council-img/FCC.png?height=300&width=400",
+      image: "/Council-img/MI.png?height=300&width=400",
       requirements: "Grades 8-12",
+      pdf: "/pdfs/FCC.pdf",
     },
     {
       name: "Fédération Internationale de l'Automobile",
@@ -105,7 +112,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/FIA.png?height=300&width=400",
       requirements: "Grades 8-12",
-      pdf: "", 
+      pdf: "/pdfs/FIA.pdf", 
     },
   ]
 
@@ -120,6 +127,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/UNESCO.png?height=300&width=400",
       requirements: "Grades 5-7",
+      pdf: "/pdfs/UNESCO.pdf",
     },
     {
       name: "United Nations Environment Programme",
@@ -131,6 +139,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/UNEP.png?height=300&width=400",
       requirements: "Grades 5-7",
+      pdf: "/pdfs/UNEP.pdf",
     },
     {
       name: "World Health Organization",
@@ -142,6 +151,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/WHO.png?height=300&width=400",
       requirements: "Grades 5-7",
+      pdf: "/pdfs/WHO.pdf",
     },
     {
       name: "Union of European Football Associations",
@@ -153,6 +163,7 @@ const CouncilsSection = () => {
       ),
       image: "/Council-img/UEFA.png?height=300&width=400",
       requirements: "Grades 5-7",
+      pdf: "/pdfs/UEFA.pdf",
     },
   ]
 
@@ -260,7 +271,7 @@ const CouncilsSection = () => {
                     <div className="text-sm text-gray-700">{council.requirements}</div>
                   </div>
 
-                  {/* {council.pdf ? (
+                  {council.pdf ? (
                     <a
                       href={council.pdf}
                       target="_blank"
@@ -276,7 +287,7 @@ const CouncilsSection = () => {
                     >
                       View Background Guides
                     </button>
-                  )} */}
+                  )}
                 </div>
               </div>
             </motion.div>
